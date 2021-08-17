@@ -111,7 +111,8 @@ $onlyIf[$getServerVar[eklog]!=;]`
 bot.awaitedCommand({
   name:"onay",
   code:` $author[Mixden Yardım Menüsü;$authorAvatar]
-  $addField[{image:https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif} Koruma;emoji-koruma, link-engel]
+  $addField{image:https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif}]
+  $addField[Koruma;emoji-koruma, link-engel]
 $addField[Eğlence;howgay, 25miles, palyaço, biden, rte, trump, kaçcm, ]
 $addField[Ayarlamalı;hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log]
 $addField[Moderasyon;ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex]
