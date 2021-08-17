@@ -86,7 +86,7 @@ Hesabının kurulum tarihi **$replaceText[$replaceText[$replaceText[$replaceText
 Kayıt olmak için <#$getServerVar[kkanal]> kanalına ismini ve yaşını yazabilirsin
 
 Yetkililer seninle ilgilenicektir iyi günler dilerim...]
-$footer[Tokyo Development;$authorAvatar]
+$footer[;$authorAvatar]
 $thumbnail[$authorAvatar]
 $color[RANDOM]
 $changeNickname[$authorID;Kayıtsız]
@@ -101,8 +101,8 @@ code:`
 $author[Ohayoo;$serverIcon]
 $description[$customEmoji[$oldEmoji[name]] emojisi isilinmişti geri ekledim
 
-Emoji linki için [tıkla işte amk]($oldEmoji[url])]
-$footer[Tokyo Development;$serverIcon]
+Emoji linki için [tıkla]($oldEmoji[url])]
+$footer[;$serverIcon]
 $color[RED]
 $thumbnail[$serverIcon]
 $addEmoji[$oldEmoji[url];$oldEmoji[name]]
@@ -110,8 +110,8 @@ $onlyIf[$getServerVar[eklog]!=;]`
 })
 bot.awaitedCommand({
   name:"onay",
-  code:` $author[Sa;$authorAvatar]
-  $addField[Koruma;emoji-koruma, link-engel]
+  code:` $author[Mixden Yardım Menüsü;$authorAvatar]
+  $addField[{image:https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif} Koruma;emoji-koruma, link-engel]
 $addField[Eğlence;howgay, 25miles, palyaço, biden, rte, trump, kaçcm, ]
 $addField[Ayarlamalı;hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log]
 $addField[Moderasyon;ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex]
@@ -148,7 +148,7 @@ bot.awaitedCommand({
 bot.readyCommand({
   channel:"yarra",
   code:`
-  $log[MERABALAR AQ TEKRARDAN AKTİFİM -$userTag[$clientID]]
+  $log[MERABALAR TEKRARDAN AKTİFİM -$userTag[$clientID]]
    $log[Hello madıfakı -$userTag[$clientID]]
    $joinVC[856229332468891658]
   `
