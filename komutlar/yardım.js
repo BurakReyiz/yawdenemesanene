@@ -11,6 +11,6 @@ module.exports = {
 
 \`📚 Tepkiye Basarak Yardım Menüsünü Görebilirsiniz 📚\`
 ;yes]; ]
-$deletein[12s]
+
   `
   }
