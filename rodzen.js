@@ -360,7 +360,7 @@ $description[Bir rol oluşturuldu
 > Rol rengi: **$newRole[color]**
 
 > Rol izinleri: **$newRole[permissions]**]
-$footer[Tokyo Development;$serverIcon]
+$footer[;$serverIcon]
 $color[$getServerVar[hex]]
 $thumbnail[$serverIcon]
 `
