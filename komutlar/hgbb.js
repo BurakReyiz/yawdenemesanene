@@ -14,11 +14,11 @@ module.exports = {
         $setServerVar[hgbb;]
         $endif
         $if[$message[1]==resim]
-        $description[HGBB sistemi ne resim eklendi.]
+        $description[HGBB sistemine resim eklendi.]
         $image[$message[2]]
         $color[$getServerVar[hex]] 
         $setServerVar[hgbbimage;$message[2]]
-        $onlyIf[$checkContains[$toLowercase[$message[2]];https://]==false;:x: | **Bu linkmi orosbu çocu düzgün kullan şu komutu**] 
+        $onlyIf[$checkContains[$toLowercase[$message[2]];https://]==false;:x: | **Bu linkmi düzgün kullan şu komutu**] 
      
         $onlyIf[$message[2]!=; :x: | **Bir bir resim linki girmen gerekli.**]
         $endif
