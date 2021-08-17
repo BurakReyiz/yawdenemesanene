@@ -240,7 +240,7 @@ $author[$userTag;$authorAvatar]
 $description[Bir kullanıcı ayrıldı
 
 > Ayrılan kullanıcı:** <@$authorID> • $userTag • $authorID**]
-$footer[Tokyo Development;$authorAvatar]
+$footer[;$authorAvatar]
 $color[$getServerVar[hex]]
 $thumbnail[$authorAvatar]
 `
@@ -252,7 +252,7 @@ $author[$userTag;$authorAvatar]
 $description[Bir kullanıcı katıldı
 
 > Katılan kullanıcı:** <@$authorID> • $userTag • $authorID**]
-$footer[Tokyo Development;$authorAvatar]
+$footer[;$authorAvatar]
 $color[$getServerVar[hex]]
 $thumbnail[$authorAvatar]
 `
@@ -268,7 +268,7 @@ $description[Bir emoji eklendi
 > Emoji id'si: **$newEmoji[id]**
 
 > Emoji linki:** [tıkla]($newEmoji[url]) **]
-$footer[Tokyo Development;$newEmoji[url]]
+$footer[;$newEmoji[url]]
 $color[$getServerVar[hex]]
 $thumbnail[$newEmoji[url]]
 `
@@ -285,7 +285,7 @@ $description[Bir emoji silindi
 > Emoji id'si: **$oldEmoji[id]**
 
 > Emoji linki: ** [Tıkla]($oldEmoji[url]) **]
-$footer[Tokyo Development;$oldEmoji[url]]
+$footer[;$oldEmoji[url]]
 $color[$getServerVar[hex]]
 $thumbnail[$oldEmoji[url]]
 `
@@ -299,7 +299,7 @@ $description[Bir davet oluşturuldu
 > Oluşturan kişi: <@$inviteUserID>
 
 > Davet kodu: **$inviteCode • $inviteURL **]
-$footer[Tokyo Development;$userAvatar[$inviteUserID]]
+$footer[;$userAvatar[$inviteUserID]]
 $color[$getServerVar[hex]]
 $thumbnail[$userAvatar[$inviteUserID]]
 `
@@ -314,7 +314,7 @@ $description[Bir davet silindi
 > Davet sahibi: <@$inviteUserID>
 
 > Davet kodu: **$inviteCode**]
-$footer[Tokyo Development;$userAvatar[$inviteUserID]]
+$footer[;$userAvatar[$inviteUserID]]
 $color[$getServerVar[hex]]
 $thumbnail[$userAvatar[$inviteUserID]]
 `
@@ -328,7 +328,7 @@ $description[Bir kişi banlandı
 > Banlanan kişi: **$userTag[$authorID] • $authorID**
 
 > Banlanma sebebi: **$getBanReason[$authorID]**]
-$footer[Tokyo Development;$userAvatar[$authorID]]
+$footer[;$userAvatar[$authorID]]
 $color[$getServerVar[hex]]
 $thumbnail[$userAvatar[$authorID]]
 `
@@ -341,7 +341,7 @@ $author[$userTag[$authorID];$userAvatar[$authorID]]
 $description[Bir kişinin banı açıldı
 
 > Banı kaldırılan kişi: **$userTag[$authorID] • $authorID**]
-$footer[Tokyo Development;$userAvatar[$authorID]]
+$footer[;$userAvatar[$authorID]]
 $color[$getServerVar[hex]]
 $thumbnail[$userAvatar[$authorID]]
 `
@@ -376,7 +376,7 @@ $description[Bir rol silindi
 > Rol rengi: **$oldRole[color]**
 
 > Rol izinleri: **$oldRole[permissions]**]
-$footer[Tokyo Development;$serverIcon]
+$footer[;$serverIcon]
 $color[$getServerVar[hex]]
 $thumbnail[$serverIcon]
 `
@@ -389,7 +389,7 @@ $description[Bir kanal oluşturuldu
 
 > Oluşturulan kanal: <#$newChannel[id]> • $newChannel[name]
 ]
-$footer[Tokyo Development;$serverIcon]
+$footer[;$serverIcon]
 $color[$getServerVar[hex]]
 $thumbnail[$serverIcon]
 `
@@ -402,7 +402,7 @@ $author[$oldChannel[name];$serverIcon]
 $description[Bir kanal silindi
 
 > Silinen kanal: **$oldChannel[name]**]
-$footer[Tokyo Development;$serverIcon]
+$footer[;$serverIcon]
 $color[$getServerVar[hex]]
 $thumbnail[$serverIcon]
 `
@@ -418,7 +418,7 @@ $description[Bir mesaj düzenlendi
 > Yeni mesaj: **$message**
 
 > Mesaj sahibi: <@$authorID>]
-$footer[Tokyo Development;$authorAvatar]
+$footer[;$authorAvatar]
 $color[$getServerVar[hex]]
 $thumbnail[$authorAvatar]
 `
@@ -434,7 +434,7 @@ $description[Bir mesaj silindi
 > Silinen mesaj: **$message**
 
 > Mesaj sahibi: <@$authorID>]
-$footer[Tokyo Development;$authorAvatar]
+$footer[;$authorAvatar]
 $color[$getServerVar[hex]]
 $thumbnail[$authorAvatar]
 `
