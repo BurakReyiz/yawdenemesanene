@@ -448,14 +448,14 @@ bot.command({
 })
 
 bot.status({
-    text: `Zuzia RodzeN | Neden sadece rodzen amk -Parzi`,
+    text: ``,
     type: "PLAYING",
     status: "dnd",
     time: 12
 })
 
 bot.variables({
-  prefix:"!",
+  prefix:"md!",
   hgbb:"",
   bbtxt:"-isimt- Tekrar görüşmek üzere bb. ^^",
   hgtxt:"-isimt- Hoş geldin umarım iyi vakit geçirsin. ^^",
