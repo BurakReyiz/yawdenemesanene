@@ -11,5 +11,6 @@ module.exports = {
 
 \`📚 Tepkiye Basarak Yardım Menüsünü Görebilirsiniz 📚\`
 ;yes]; ]
+
   `
   }
