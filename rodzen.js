@@ -448,7 +448,7 @@ bot.command({
 })
 
 bot.status({
-    text: `Zuzia RodzeN | Neden sadece rodzen amk -Parzi`,
+    text: ``,
     type: "PLAYING",
     status: "dnd",
     time: 12
