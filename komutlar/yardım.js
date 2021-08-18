@@ -10,7 +10,7 @@ module.exports = {
 📥 Davet Linkim= https://discord.com/oauth2/authorize?client_id=856499683929489438&scope=bot&permissions=0
 
 \`📚 Tepkiye Basarak Yardım Menüsünü Grebilirsiniz 📚\`
-;yes]; ]
+;yes]; ] $deleteIn[12s]
 
   `
   }
