@@ -116,7 +116,7 @@ $image[https://media.discordapp.net/attachments/837255566979235900/8647839748075
 $addField[Eğlence;howgay, 25miles, palyaço, biden, rte, trump, kaçcm, ]
 $addField[Ayarlamalı;hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log]
 $addField[Moderasyon;ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex]
-$addField[Genel;qr, avatar, sunucu-bilgi, afk, tavsiye]
+$addField[Genel;qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik]
 $addField[Prefixim;\`\`\`fix
 $getServerVar[prefix]\`\`\`]
   $color[$getServerVar[hex]]
