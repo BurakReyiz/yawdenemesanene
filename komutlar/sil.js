@@ -16,4 +16,5 @@ $onlyIf[$message[1]!=;\`Bir sayı girin.\`]
 $onlyIf[$message[1]>0;\`Girdiğin Rakam\` **1**\`'in Altında Olamaz !\`]
 $onlyIf[$message[1]<101;\`Girdiğin Rakam\` **100**\`'ün Üstünde Olamaz !\`]  
 $suppressErrors
+
 `})
