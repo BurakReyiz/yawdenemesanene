@@ -495,3 +495,7 @@ bot.variables({
   saas:"kapalı",
   tlog:""
   })
+bot.variables ({
+premium:"no",
+presayı:"0",
+})
