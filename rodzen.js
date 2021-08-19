@@ -98,8 +98,8 @@ $giveRoles[$authorID;$getServerVar[kayıtsız]]
 bot.emojiDeleteCommand({
 channel:"$getServerVar[eklog]",
 code:`
-$author[Ohayoo;$serverIcon]
-$description[$customEmoji[$oldEmoji[name]] emojisi isilinmişti geri ekledim
+$author[Selam;$serverIcon]
+$description[$customEmoji[$oldEmoji[name]]
 
 Emoji linki için [tıkla]($oldEmoji[url])]
 $footer[;$serverIcon]
@@ -112,12 +112,14 @@ bot.awaitedCommand({
   name:"onay",
   code:`$author[Mixden Yardım Menüsü;$authorAvatar]
 $image[https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif]
+$addField[$customEmoji[mavisiren] **Destek** (\`1\`);\`destek\`]
 $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, link-engel\`]
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`7\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm\`]
-$addField[<a:kirmizi_siren:713083350528688200> **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
+$addField[$customEmoji[asker] **Premium Komutlarım* (\`0\`);\`YAKINDA!\`]
+$addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
 $addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`14\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
-$addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma| Genel | Eğlence\`]
+$addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon || Ayarlamalı |  Koruma || Gene||Emium | eğlence\`]
   $color[$getServerVar[hex]] 
   $thumbnail[$authorAvatar]`
 }) 
