@@ -1,8 +1,9 @@
 module.exports = {
   name:"kayıt-sistemi",
   code:`
-  $author[KAYIT SİSTEMİ;$authorAvatar]
-        $description[-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-
+  $author[Kayıt Sistemi;$authorAvatar]
+        $description[
+        ======================================================
         
          **Erkek rolü ayarlamak için:** \`$getServerVar[prefix]ks-ayarla erkekrol @rol\`
          **Erkek rolünü sıfırlamak için:** \`$getServerVar[prefix]ks-sıfırlarol erkek\`
@@ -16,12 +17,13 @@ module.exports = {
          **Kayıt kanalını sıfırlamak için:** \`$getServerVar[prefix]ks-sıfırla kayıtkanal\` 
           **Kayıt log ayarlamak için:** \`$getServerVar[prefix]ks-ayarla kayıtlog #kanal\`
          **Kayıt logunu sıfırlamak için:** \`$getServerVar[prefix]ks-sıfırla kayıtlog\` 
-        -=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-
+         
+        ======================================================
         
 **Erkek üye kayıt etmek için:** \`$getServerVar[prefix]erkek <isim> <yaş>\`
 **Kız üye kayıt etmek için:** \`$getServerVar[prefix]kız <isim> <yaş>\`
 
-        -=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-
+        ======================================================
         ]
         $color[$getServerVar[hex]]
         $thumbnail[$serverIcon]
