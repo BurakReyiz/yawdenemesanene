@@ -1,7 +1,7 @@
 module.exports = {
         name: "hgbb-sistemi",
         code: `$author[HGBB SİSTEMİ;$authorAvatar]
-        $description[-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-
+        $description[-===-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-=0=-
         
         **HGBB Sistemini açmak için:** \`$getServerVar[prefix]hgbb aç #kanal\`
         **HGBB Sistemini kapatmak için:** \`$getServerVar[prefix]hgbb kapat\`

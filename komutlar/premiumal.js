@@ -4,6 +4,7 @@ code:`$setGlobalUserVar[premium;no;$mentioned[1]]
 $setVar[presayı;$sub[$getVar[presayı];1]]$useChannel[premiun log kanalı idsi]
 <@$mentioned[1]>
 $title[Başarılı]
+$color[RANDOM]
 $description[__Premiumu Alınan Üye__:\`$username[$mentioned[1]]\`
 
 __Premiumun Alındığı Sunucu__: [$serverName[$guildID]]($getServerInvite)

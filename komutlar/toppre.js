@@ -2,6 +2,7 @@ module.exports = {
 name:"toppre",
 code:`
 $title[Selam]
+$color[RANDOM]
 $description[
 **Şuanda Toplam \`$getVar[presayı]\` Premium Üyem Var**
 
