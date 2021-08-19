@@ -1,7 +1,7 @@
 module.exports = {
 name:"müzik",
 code:`$title[$customEmoji[684883779424485385] Mixden Müzik Sistemi]
-        $description[
+$description[
 ==========================     
 $customEmoji[kilic] **Şarkıyı Başlatmak İçin:** \`$getServerVar[prefix]çal\`
 $customEmoji[wumpus_klavye] **Şarkı Sırasını Açmak İçin:** \`$getServerVar[prefix]sıralama\`      
@@ -15,7 +15,6 @@ $customEmoji[wumpus_nitro] **Şarkıyı Geçmek İçin:** \`$getServerVar[prefix
 $customEmoji[pepe_exit] **Şarkıyı Bitirmek İçin Ses 
 Kanalından Çıkmanız Yeterlidir**
 ]
-$footer[Mixden Müzik Sistemi!]
 $color[$getServerVar[hex]]
 $thumbnail[$serverIcon]
 `
