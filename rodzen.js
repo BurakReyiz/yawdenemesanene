@@ -54,7 +54,7 @@ bot.command({
 name:"sa",
 aliases: ["sea","selamun aleyküm"],
 code:`
-$reply[$messageID;Aleyküm Selam Hoşgeldin **$nickname** $customEmoji[hosgeldiniz];yes]
+$reply[$messageID;**Aleyküm Selam Hoşgeldin** <@$authorID> $customEmoji[hosgeldiniz];yes]
 $onlyIf[$message==;]
 `,
 nonPrefixed: true
