@@ -34,7 +34,7 @@ for(const file of reader) {
 bot.command({
 name:"saas-aç",
 code:`
-:-<a:tik2:713082245543493712> Sa-As Sistemi Açıldı Sa Yazıldığında Cevap Vereceğim
+<a:tik2:713082245543493712> **Sa-As Sistemi Açıldı Sa Yazıldığında Cevap Vereceğim** <a:tik2:713082245543493712>
 $setServerVar[saas;açık]
 $onlyPerms[admin;❌ Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[saas]!=açık;⚠ Bu Sistem Zaten Açık]
@@ -44,7 +44,7 @@ $onlyIf[$getServerVar[saas]!=açık;⚠ Bu Sistem Zaten Açık]
 bot.command({
 name:"saas-kapat",
 code:`
-:-<a:tik2:713082245543493712> Sa-As Sistemi Kapatıldı  Sa Dendiğinde Cevap Vermiycem
+<a:tik2:713082245543493712> **Sa-As Sistemi Kapatıldı Sa Dendiğinde Cevap Vermiyeceğim** <a:tik2:713082245543493712>
 $setServerVar[saas;kapalı]
 $onlyPerms[admin;❌ Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[saas]!=kapalı;⚠ Bu Sistem Zaten Kapalı]

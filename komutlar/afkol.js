@@ -8,7 +8,7 @@ $setGlobalUserVar[afk;evet]
 $setGlobalUserVar[afkc;0]
 $setGlobalUserVar[afks;$message]
 $setGlobalUserVar[afkss;$dateStamp]
-$description[Afk Olma Başarılı
+$description[ <a:tik2:713082245543493712> Afk Olma Başarılı <a:tik2:713082245543493712>
 Afk Sebebi: \`$message\`
 Afk Zamanı Kaydedildi: $sum[$hour;3].$minute
 Toplam AFK Kişi Sayısı: \`$getVar[afkkk]\`]
