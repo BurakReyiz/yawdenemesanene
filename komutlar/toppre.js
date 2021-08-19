@@ -7,7 +7,6 @@ $description[
 
 __Premium Üye Olmak İçin Sunucumuzu Ziyaret Edin__
 ]
-$thumbnail[$userAvatar[$clientID]]$onlyIf[$getGlobalUserVar[premium;$authorID]!=no;Bunun İçin Premium Üye Olmalısınız]
-$footer[Destek Sunucuma Gelmek İçin $getServerVar[Prefix]destek Yazın]
+$footer[Destek Sunucuma Gelmek İçin $getServerVar[prefix]destek Yazın]
 `
 }
