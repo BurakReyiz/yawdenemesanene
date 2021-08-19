@@ -112,6 +112,7 @@ bot.awaitedCommand({
   name:"onay",
   code:`$author[Mixden Yardım Menüsü;$authorAvatar]
 $image[https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif]
+$addField[$customEmoji[muzik] **Müzik** (\`1\`);\`
 $addField[$customEmoji[mavisiren] **Destek** (\`1\`);\`destek\`]
 $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, link-engel\`]
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`7\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm\`]
