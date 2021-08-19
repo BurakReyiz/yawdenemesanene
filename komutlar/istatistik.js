@@ -28,6 +28,6 @@ $customEmoji[zil] • Kütüphanem: \`AOI.js\`
 $customEmoji[enerji] • Linkler: ** [Destek sunucum](https://discord.gg/QtffYC2Ubd) , [Davet linkim](https://discord.com/oauth2/authorize?client_id=$clientID&scope=bot&permissions=8 ) **]
 $footer[Mixden İstatistik Menüsü;$authorAvatar]
 $thumbnail[$userAvatar[$clientID]]
-$color[BLACK]
+$color[RANDOM]
 `
 }
