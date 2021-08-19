@@ -17,7 +17,7 @@ __Hesap Detayları__:
 
 $channelSendMessage[$channelID;** Üyeye Premium Verildi **]
 
-$onlyForIDs[$botOwnerID;654741976327127080;Sadece Sahibim Premium Verebilir]
+$onlyForIDs[$botOwnerID;Sadece Sahibim Premium Verebilir]
 
 $onlyIf[$mentioned[1]!=;Kime Premium Vermeliyim]
 `
