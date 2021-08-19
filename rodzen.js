@@ -164,6 +164,65 @@ $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $onlyIf[$queue[1;10;{number} - {title}]!=;Sırada bir şarkı bulunmuyor]
 $suppressErrors[Şarkı çalmazken kullanamazsın]`
 }); 
+bot.command({
+    name: 'devam',
+    aliases: ['resume'],
+    code: `
+$addCmdReactions[▶]
+$resumeSong
+$onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+}); 
+bot.command({
+    name: 'tekrarla',
+    aliases: ['loop'],
+    code: `
+$addCmdReactions[🔁]
+$let[tekrarla;$loopQueue]
+$onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+}); 
+bot.command({
+    name: 'geç',
+    aliases: ['skip'],
+    code: `
+$addCmdReactions[⏯]
+$let[geç;$skipSong]
+$onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+}); 
+bot.command({
+    name: 'çık',
+    aliases: ['leave'],
+    code: `
+$addCmdReactions[⏹]
+$leaveVC
+$onlyIf[$voiceID[$clientID]!=;Zaten bir ses kanalında değilim]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+$suppressErrors[Ses kanalından çıkamadım]
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+}); 
+
+bot.command({
+    name: 'ses',
+    aliases: ['sound'],
+    code: `
+$addCmdReactions[🔊]
+$volume[$message]
+$onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyIf[$message<=100;Maximum 100 olarak ayarlanabilir]
+$onlyIf[$isNumber[$message]!=false;Bir sayı girmelisin]
+$argsCheck[1;Lütfen bir ses seviyesi gir]
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+});
 
 bot.awaitedCommand({
   name:"zuzia",
@@ -496,6 +555,7 @@ bot.variables({
   bbtxt:"-isimt- Tekrar görüşmek üzere bb. ^^",
   hgtxt:"-isimt- Hoş geldin umarım iyi vakit geçirsin. ^^",
   hgbbimage:"",
+  şarkı:"",
   hex:"RANDOM",
   mrol:"boş",
   myetkili:"",
