@@ -6,7 +6,7 @@ $author[$userTag;$authorAvatar]
 $description[Selam \`$userTag[$clientID]\` İşte Mixden'nin İstatistikleri
 
 $customEmoji[sari1] • Sahibim: \`$userTag[$botOwnerID]\`
-$customEmoji[developer_yk] • Bot Yardımcısı: \`!                      FK Yunus#0139\`
+$customEmoji[developer_yk] • Mixden Yardımcısı \`!         FK Yunus#0139\`
 
 $customEmoji[kirmiziates] • Toplam Kullanıcı Sayım: \`$allMembersCount\`
 $customEmoji[discord] • Toplam Sunucu Sayım: \`$serverCount\`
