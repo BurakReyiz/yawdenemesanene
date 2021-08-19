@@ -55,7 +55,7 @@ name:"sa",
 aliases: ["sea","selamun aleyküm"],
 code:`
 $reply[$messageID;Aleyküm Selam Hoşgeldin **$nickname**;yes]
-$onlyIf[$getServerVar[saas]!=kapalı;]
+$onlyIf[[saas]!=kapalı;
 `,
 nonPrefixed: true
 })   
