@@ -7,7 +7,7 @@ $channelSendMessage[$getServerVar[modlog];{description:$usertag <#$channelID> ka
 $endif
 $clear[$sum[1;$message[1]]]
 \`\`\`kt
-"$message[1]" miktarda mesaj silindi.
+"$message[1]" Miktarda Mesaj Başarıyla silindi.
 \`\`\`
 $onlyIf[$hasPerms[$authorID;managemessages]!=false;**Mesajları Yönet** \`yetkin yok.\`]
 $onlyIf[$hasPerms[$clientID;managemessages]!=false;**Mesajları Yönet** \`yetkim yok.\`]

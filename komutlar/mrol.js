@@ -4,7 +4,7 @@ code:`$if[$message[1]==ayarla]
 $setServerVar[mrol;$mentionedRoles[1]]
 $description[Mute rolü <@&$mentionedRoles[1]> olarak ayarlandı.]
 $color[$getServerVar[hex]] 
-$onlyIf[$mentionedRoles[1]!=;:x: | Bir rol etiketlemelisin]
+$onlyIf[$mentionedRoles[1]!=$customEmoji[tik]| Bir rol etiketlemelisin]
 $endif
 $if[$message[1]==sıfırla]
 $setServerVar[mrol;]
