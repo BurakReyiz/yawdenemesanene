@@ -54,7 +54,7 @@ bot.command({
 name:"sa",
 aliases: ["sea","selamun aleyküm"],
 code:`
-$reply[$messageID;Aleyküm Selam Hoşgeldin **$nickname**;yes]
+$reply[$messageID;Aleyküm Selam Hoşgeldin **$nickname** $customEmoji[hosgeldiniz];yes]
 $onlyIf[$message==;]
 `,
 nonPrefixed: true
@@ -114,16 +114,14 @@ bot.awaitedCommand({
 $image[https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif]
   $addField[$customEmoji[dikkatet] **Koruma Komutlarım**;\`emoji-koruma, link-engel\`]
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım**;\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm\`]
-$addField[$customEmoji[ayarlama] **Ayarlamalı Komutlarım**;\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
+$addField[<a:kirmizi_siren:713083350528688200> **Ayarlamalı Komutlarım**;\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
 $addField[$customEmoji[banned] **Moderasyon Komutlarım**;\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım**;\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
-$addField[Prefixim;\`fix
+$addField[Prefixim;\`
 $getServerVar[prefix]\`]
   $color[$getServerVar[hex]] 
-  $thumbnail[$authorAvatar]
-`
-})
-
+  $thumbnail[$authorAvatar]`
+}) 
 bot.awaitedCommand({
   name:"parzi",
   code:`

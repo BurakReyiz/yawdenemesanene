@@ -4,9 +4,10 @@ module.exports = ({
 	$deleteIn[20s]
 	$setGlobalUserVar[afkaa;$userTag[$authorID];$mentioned[1]]
     $setGlobalUserVar[afkmm;$sum[$getGlobalUserVar[afkmm;$mentioned[1]];1];$mentioned[1]]
-    $description[<a:dikkatet:743848658205933578> **AFK bir kişiyi etiketlediniz.**
-    <:emoji_97:836803741947527189> Etiketlediğiniz kişinin AFK sebebi: \`$getGlobalUserVar[afks;$mentioned[1]]\`
-    <a:duyuru:837569105212342273> Etiketlediğiniz Kişi \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$parseDate[$math[$dateStamp-$getglobaluservar[afkss;$mentioned[1]]];time];and;ve;1];seconds;Saniye;1];minutes;Dakika;1];hours;Saat;1];days;Gün;1];weeks;Hafta;1];months;Ay;1];years;Yıl;1];second;Saniye;1];minute;Dakika;1];hour;Saat;1];day;Gün;1];week;Hafta;1];month;Ay;1];year;Yıl;1]\` süredir afk.]
+    $description[
+$customEmoji[dikkatet] **AFK bir kişiyi etiketlediniz.**
+$customEmoji[emoji_97]Etiketlediğiniz kişinin AFK sebebi: \`$getGlobalUserVar[afks;$mentioned[1]]\`
+$customEmoji[duyuru] Etiketlediğiniz Kişi \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$parseDate[$math[$dateStamp-$getglobaluservar[afkss;$mentioned[1]]];time];and;ve;1];seconds;Saniye;1];minutes;Dakika;1];hours;Saat;1];days;Gün;1];weeks;Hafta;1];months;Ay;1];years;Yıl;1];second;Saniye;1];minute;Dakika;1];hour;Saat;1];day;Gün;1];week;Hafta;1];month;Ay;1];year;Yıl;1]\` süredir afk.]
     $color[BDAAF9]
     $onlyIf[$getGlobalUserVar[afk;$mentioned[1]]==evet;]
     $suppressErrors`
