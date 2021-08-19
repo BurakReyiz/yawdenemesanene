@@ -1,23 +1,25 @@
 module.exports = ({
 name:"müzik",
-code:`$author[Mixden Müzik Sistemi;$authorAvatar]
+code:`$title[Mixden Müzik Sistemi;$authorAvatar]
         $description[
         ======================================================
         
         **Şarkıyı Başlatmak İçin:** \`$getServerVar[prefix]çal\`
-        **Şarkö Sırasını Açmak İçin:** \`$getServerVar[prefix]sıralama\`
+        **Şarkı Sırasını Açmak İçin:** \`$getServerVar[prefix]sıralama\`
         
         ======================================================
         
-        **Mute yetkili rolü ayarlamak için:** \`$getServerVar[prefix]myetkili ayarla @rol\`
-        **Mute yetkili rolünü sıfırlamak için:** \`$getServerVar[prefix]myetkili sıfırla\`
+        **Şarkıyı Durdurmak İçin:** \`$getServerVar[prefix]durdur\`
+        **Şarkıyı Devam Ettirmek İçin:** \`$getServerVar[prefix]devam\`
         
         ======================================================
         
-        **Mute atmak için:** \`$getServerVar[prefix]mute @üye\`
-        **Unmute atmak için:** \`$getServerVar[prefix]unmute @üye\`
+        **Şarkıyı Tekrarlamak İçin:** \`$getServerVar[prefix]tekrarla\`
+        **Şarkıyı Geçmek İçin:** \`$getServerVar[prefix]geç\`
         
         ======================================================
+        **Şarkıyı Bitirmek İçin Ses Kanalından Çıkmanız Yeterlidir** $customEmoji[anime_nd].
+        
         ]
         $color[$getServerVar[hex]]
         $thumbnail[$serverIcon]
