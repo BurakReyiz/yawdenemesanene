@@ -224,47 +224,6 @@ $onlyIf[$isNumber[$message]!=false;Bir sayı girmelisin]
 $argsCheck[1;Lütfen bir ses seviyesi gir]
 $onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
 });
-module.exports = ({
-  name:"kilitle",
-  code:`
-  $reply[$messageID;Kanal Kilidi Açıldı;yes]
-  $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
-  $wait[$noMentionMessage[1]]
-  $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
-  $channelSendMessage[$channelID;{title:$username[$clientID] Kanal kilitleme sistemi}
-  {description:Başarıyla Kanal \`$noMentionMessage[1]\` süre boyunca kilitlendi
-  
-  Kilitlenen Kanal : <#$mentionedChannels[1;yes]>
-  Kilitleme Süresi : $replaceText[$replaceText[$replaceText[$noMentionMessage[1];s; Saniye];m; Dakika;];h; Saat]
-  Kilitleyen Yetkili : $userTag[$authorID]
-  Kilitleme Sebebi : $noMentionMessage[2]}
-  {color:303136}{thumbnail:$authorAvatar}]
-  $onlyIf[$mentionedChannels[1]!=;Lütfen bir Kanal etiketle]
-  $onlyIf[$checkContains[$toLowerCase[$noMentionMessage[1];<;#;>]];Lütfen Bir kanal etiketle]
-  $onlyIf[$isNumber[$noMentionMessage[1]]==false;Lütfen bir kanal etiketle]
-  $onlyIf[$checkContains[$toLowerCase[$noMentionMessage[1];s;m;d;h]]==true;Lütfen Geçerli Bir Süre Girin. \`1h, 5m 10s\` gibi]
-  $onlyPerms[managechannels;{title:Hata}{description:Bu komutu kullanabilmek için sunucuda **Kanalları Yönet** yetkisine sahip olman gerekiyor.}{color:RED}]
-  $argsCheck[>1;Süre Belirtmen Gerekiyor. Doğru kullanım : $getServerVar[prefix]kilitle #kanal süre]
-`
-  })
-module.exports = ({
-  name:"kilit-aç",
-  code:`
-  $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
-  $title[$username[$clientID] Kanal Kilit açma sistemi]
-  $description[Başarıyla Kanalın kilidi açıldı
-  
-  Kilidi açılan Kanal : <#$mentionedChannels[1;yes]>
-  Kilidi açan Yetkili : $userTag[$authorID]]
-  $color[303136]
-  $thumbnail[$authorAvatar]
-  $useChannel[$channelID]
-  $onlyIf[$isNumber[$noMentionMessage[1]]==false;Lütfen geçerli bir kanal etiketle.]
-  $onlyBotPerms[managechannels;{title:Hata}{description:Bu komutu kullanabilmek için sunucuda **Kanalları Yönet** yetkisine sahip olmam gerekiyor.}{color:RED}]
-  $onlyPerms[managechannels;{title:Hata}{description:Bu komutu kullanabilmek için sunucuda **Kanalları Yönet** yetkisine sahip olman gerekiyor.}{color:RED}]
-  $argsCheck[>1;Lütfen Bir Kanal Etiketle. \`!!kilit-aç #$channelName[$channelID]\` gibi]
-`
-  })
 bot.command({
   name:"otocevap",
    code:`
