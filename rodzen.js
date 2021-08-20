@@ -30,6 +30,45 @@ for(const file of reader) {
      })
                
   }
+module.exports = {
+name:"slowmode",
+code:`
+✅ <#$channelID> Adlı Kanalda Yavaş Mod \`$message[1]\` Olarak Ayarlandı
+$onlyIf[$isNumber[$message[1]]!=false;Bir Sayı Yazın]
+$onlyIf[$message[1]!=;**Kullanım**: {prefix}slowmode 5]
+$slowmode[$channelID;$message[1]s]
+$onlyPerms[managechannels;Yetkin Yok Baka!]
+$onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı] 
+`
+}
+bot.command({
+name:"küfür-engel",
+code:`
+$if[$message[1]==aç]
+✔️ Küfür Engel Açıldı
+$setServerVar[kengel;açık]
+$onlyPerms[admin;⚠️Bunun İçin \`Yönetici\` İznin Olmalı]
+$onlyIf[$getServerVar[kengel]!=açık;Bu Zaten Açık]
+$endif
+$if[$message[1]==kapat]
+✔️Küfür Engel Kapatıldı
+$setServerVar[kengel;kapalı]
+$onlyPerms[admin;⚠️Bunun İçin \`Yönetici\` İznin Olmalı]
+$onlyIf[$getServerVar[kengel]!=kapalı;Bu Zaten Kapalı]
+$endif
+$onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]!=false;Lütfen **aç** veya **kapat** yaz]
+`})
+bot.command({
+name:"$alwaysExecute",
+code:`
+$title[Sus Be Terbiyesiz]
+$description[<@$authorID> Bu Sunucuda Küfür Engel Açık]
+$deletecommand
+$onlyIf[$checkContains[$toLowercase[$message];amk;aq;orosbu;ananı;sikim;sg;siktir;pezeveng;amcık;siqerim;sikerim]==true;]
+$onlyIf[$hasPerms[$authorID;admin]!=true;]
+$onlyIf[$getServerVar[kengel]!=kapalı;]
+`
+})
 bot.command({
   name:"$alwaysExecute",
   aliases:['<@!$clientID>', '<@$clientID>'],
@@ -726,6 +765,7 @@ bot.variables({
   zerotwo:"",
   zerotwokk:"",
   zerotwos:"",
+  kengel:"kapalı",
   modlog:"",
   skanal:"",
   sayaç:"0",
