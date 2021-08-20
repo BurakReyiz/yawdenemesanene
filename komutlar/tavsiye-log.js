@@ -12,5 +12,6 @@ $setServerVar[tlog;]
 $endif
 $onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]==true;❗ **aç** veya **kapat** argumanlarını kullanın]
 $onlyPerms[admin;❗ Bunun için  yetkin yok]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }   

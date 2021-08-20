@@ -45,6 +45,7 @@ $textSplit[$replaceText[$getReactions[$channelID;$message[1];🎉;id];$clientID,
 $getServervar[prefix]reroll <mesaj idsi>
    \`\`\`}{color:RED}]
 $suppressErrors
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
    `
    })
 bot.command({
@@ -76,7 +77,8 @@ yapan: $userTag[$authorID]]
     $getServerVar[prefix]çekiliş <süre> <sebep>
     \`\`\`}{color:RED}]
    $onlyPerms[admin;{title:Yetkin Yok}{description:Senin \`YÖNETİCİ\` Yetkin Yok.}{color:RED}]
-$suppressErrors`
+$suppressErrors
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
    })
 bot.timeoutCommand({
     channel:"$timeoutData[kanal]",
@@ -86,7 +88,8 @@ bot.timeoutCommand({
    $channelSendMessage[$channelID;$replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;Yeterli katılımcı yoktu.];false;Ödül: \`$timeoutData[ödül]\` Kazanan: <@$randomText[$joinSplitText[;]]>, Tebrikler!]]
 $removeSplitTextElement[$findTextSplitIndex[$clientID]]
 $textSplit[$replaceText[$getReactions[$timeoutData[kanal];$getServerVar[cekilis];$timeoutData[emoji];id];$clientID,;];,]
-$suppressErrors`
+$suppressErrors
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 })
 bot.command({
 name:"küfür-engel",
@@ -104,6 +107,7 @@ $onlyPerms[admin;⚠️Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[kengel]!=kapalı;Bu Zaten Kapalı]
 $endif
 $onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]!=false;Lütfen **aç** veya **kapat** yaz]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `})
 bot.command({
 name:"$alwaysExecute",
@@ -155,6 +159,7 @@ code:`
 $setServerVar[saas;açık]
 $onlyPerms[admin;❌ Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[saas]!=açık;⚠ Bu Sistem Zaten Açık]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })
 bot.command({
@@ -165,6 +170,7 @@ Dm Açık Olan Herkese Duyurunuz İletiliyor $customEmoji[yukleniyo]
 $forEachMember[dmduyuru]
 $onlyPerms[admin;Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$message!=;Bir Duyuru Mesajı Gir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `})
 bot.awaitedCommand({
 name:"dmduyuru",
@@ -177,6 +183,7 @@ Duyuru: **$message**]
 $color[FFFFFF]
 $footer[Mixden Duyuru Sistemi]
 $suppressErrors
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })
 bot.command({
@@ -186,6 +193,7 @@ code:`
 $setServerVar[saas;kapalı]
 $onlyPerms[admin;❌ Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[saas]!=kapalı;⚠ Bu Sistem Zaten Kapalı]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })
 bot.command({
@@ -286,7 +294,8 @@ $setServerVar[şarkı;$authorID]
 $let[$playSong[$message;...;yes;yes;:x: \`$message\` adında bir müzik bulamadım.]]
 $suppressErrors[Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
-$argsCheck[>1;Lütfen bir şarkı adı gir]`
+$argsCheck[>1;Lütfen bir şarkı adı gir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 });  
 bot.command({
     name: 'sıralama',
@@ -301,7 +310,8 @@ $color[303136]
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $onlyIf[$queue[1;10;{number} - {title}]!=;Sırada bir şarkı bulunmuyor]
-$suppressErrors[Şarkı çalmazken kullanamazsın]`
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 }); 
 bot.command({
     name: 'devam',
@@ -312,7 +322,8 @@ $resumeSong
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $suppressErrors[Şarkı çalmazken kullanamazsın]
-$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 }); 
 bot.command({
     name: 'tekrarla',
@@ -323,7 +334,8 @@ $let[tekrarla;$loopQueue]
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $suppressErrors[Şarkı çalmazken kullanamazsın]
-$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 }); 
 bot.command({
     name: 'geç',
@@ -334,7 +346,8 @@ $let[geç;$skipSong]
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $suppressErrors[Şarkı çalmazken kullanamazsın]
-$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 }); 
 bot.command({
     name: 'çık',
@@ -345,7 +358,8 @@ $leaveVC
 $onlyIf[$voiceID[$clientID]!=;Zaten bir ses kanalında değilim]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $suppressErrors[Ses kanalından çıkamadım]
-$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 }); 
 
 bot.command({
@@ -360,7 +374,8 @@ $suppressErrors[Şarkı çalmazken kullanamazsın]
 $onlyIf[$message<=100;Maximum 100 olarak ayarlanabilir]
 $onlyIf[$isNumber[$message]!=false;Bir sayı girmelisin]
 $argsCheck[1;Lütfen bir ses seviyesi gir]
-$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
+$onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 });
 bot.command({
   name:"otocevap",
@@ -389,7 +404,8 @@ $endelseIf
 $endif
 $setservervar[otocevapw;1]
 $onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar **aç** ve **kapat**'tır.]
-$onlyPerms[manageserver;❌ Bu komudu kullanabilmek için **Sunuyu Yönet** yetkisine sahip olmalısın.]`
+$onlyPerms[manageserver;❌ Bu komudu kullanabilmek için **Sunuyu Yönet** yetkisine sahip olmalısın.]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]`
 })
 bot.command({
    name:"$alwaysExecute",

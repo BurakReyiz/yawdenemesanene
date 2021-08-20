@@ -9,6 +9,7 @@ $description[
 $customEmoji[asker] **Premium Üye Olmak İçin Sunucumuzu Ziyaret Edin** 
 ]
 $footer[Destek Sunucuma Gelmek İçin $getServerVar[prefix]destek Yazın]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }
 

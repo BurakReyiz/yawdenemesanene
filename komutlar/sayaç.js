@@ -19,5 +19,6 @@ module.exports = {
          $endif
          $onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]==true;:x: | **\`getServerVar[prefix]sayaç aç #kanal $random[50;111] | getServerVar[prefix]sayaç kapat\`**]
          $onlyIf[$hasPerms[$authorID;admin]!=false;:x: | **Bu komut için __YÖNETİCİ__ yetkin olması lazım.**]
+         $onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
         `
 }

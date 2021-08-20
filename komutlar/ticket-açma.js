@@ -8,5 +8,6 @@ module.exports = ({
     $deletecommand
      
 $onlyForChannels[$getServerVar[ticketk];]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })
