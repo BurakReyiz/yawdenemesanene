@@ -42,6 +42,53 @@ $onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı]
 `
 }
 bot.command({
+name:"$alwaysExecute",
+code:`
+$onlyIf[$getServerVar[level;$authorID]<=$getServerVar[lvlup;$authorID];{execute:levelup}]
+$setServerVar[level;$sum[$getServerVar[level;$authorID];$random[15;30]];$authorID]
+$onlyIf[$getServerVar[levelsistem]!=kapalı;]
+`
+}) 
+
+bot.awaitedCommand({
+name:"levelup",
+code:`
+$author[$userTag;$authorAvatar]
+$description[$customEmoji[cekilis] Tebrikler, Seviye Atladın Yeni Seviyen **$getServerVar[analvl;$authorID] !**]
+$color[RANDOM]
+$thumbnail[$authorAvatar] 
+
+$setServerVar[analvl;$sum[$getServerVar[analvl;$authorID];1];$authorID]
+$setServerVar[lvlup;$math[$getServerVar[lvlup;$authorID]*2];$authorID]
+`
+}) 
+bot.command({
+name:"level-sistemi",
+code:`
+$if[$message[1]==aç]
+$customEmoji[yesiltik] Level Sistemi Açıldı
+$setServerVar[levelsistem;açık]
+$onlyPerms[admin;$customEmoji[dikkatet] Bunun İçin \`Yönetici\` İznin Olmalı]
+$endif
+$if[$message[1]==kapat]
+$customEmoji[yesiltik] Level sistemi Kapatıldı
+$setServerVar[levelsistem;kapalı]
+$onlyPerms[admin;$customEmoji[dikkatet] Bunun İçin \`Yönetici\` İznin Olmalı]
+$endif
+$onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]!=false;Lütfen **aç** veya **kapat** yaz]
+`})    
+
+bot.command({
+name:"rank",
+aliases:"level",
+code:`
+$author[$userTag[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
+$description[**$userTag[$mentioned[1;yes]]** Adlı Kullanıcının Seviyesi **$getServerVar[analvl;$authorID]**]
+$color[RANDOM]
+$thumbnail[$userAvatar[$mentioned[1;yes]]]
+`
+})
+bot.command({
     name: "reroll",
     code: `
 $setServerVar[cekilis;undefined]
@@ -789,6 +836,8 @@ bot.variables({
   kengel:"kapalı",
   modlog:"",
   skanal:"",
+  levelsistem:"kapalı",
+  analvl:"0",
   sayaç:"0",
   s:"kapalı",
   otorolk:"",
@@ -799,6 +848,7 @@ bot.variables({
   erol:"",
   krol:"",
   kayıtsız:"",
+  level:"0",
   yetkili:"",
   kkanal:"",
   cekilis:"undefined",
@@ -807,6 +857,7 @@ bot.variables({
   invite:"",
   klog:"",
   lengel:"kapalı",
+  lvlup:"100",
   afks: "", 
   afk: "hayır", 
   afkss:"", 
