@@ -30,6 +30,39 @@ for(const file of reader) {
      })
                
   }
+bot.command({
+  name:"$alwaysExecute",
+  aliases:['<@!$clientID>', '<@$clientID>'],
+  code:`$deleteIn[8s]
+$title[Sanırım Beni Etiketledin]
+$description[**Merhaba ben $userTag[$clientID].**
+:kullanc: Prefixim : $getServerVar[prefix],
+:kullanc: Yardım Komutum : $getServerVar[prefix]yardım,
+:kullanc: İstatistik : $getServerVar[prefix]i,
+:kullanc: Sahibim : <@$botOwnerID> 
+
+**Bot Linkleri**
+:lvl: [Destek Sunucusu](DESTEK SUNUCUSUNUN LİNKİ)
+:lvl: [Botu Davet Et\\]($getBotInvite)]
+$footer[$userTag[$clientID];$userAvatar[$clientID]]
+$color[RANDOM]
+$onlyIf[$checkContains[$toLowercase[$message;<@$clientID>;<@!$clientID>]]==true;]`,
+  nonPrefixed: true
+})
+bot.readyCommand({
+name:"nebakıyonkardeşsimitvarpoğçavar",
+code:`
+$log[Bot Başarıyla Açıldı]
+$wait[1s]
+$log[database hazır]
+$wait[1s]
+$log[database hazırlanıyor]
+$log[veriler yüklendi]
+$wait[1s]
+$log[veriler yükleniyor]
+`
+})
+
 module.exports = {
 name: "oylama",
 code:`
@@ -185,7 +218,7 @@ $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
 $addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`15\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
-$addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek\`]
+$addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek | Müzik\`]
   $color[$getServerVar[hex]] 
   $thumbnail[$authorAvatar]`
 }) 
