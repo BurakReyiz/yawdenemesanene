@@ -27,6 +27,6 @@ $onlyIf[$getServerVar[erol]!=;⚠️ Erkek üye rolü ayarlanmamış ayarlamak i
 $onlyIf[$getServerVar[kayıtsız]!=;⚠️ Kayıtsız rolü ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
 $onlyIf[$getServerVar[kkanal]!=;⚠️ Kayıt kanalı ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
 $onlyIf[$getServerVar[klog]!=;⚠️ Kayıt logu ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm Bakımdayım.]
 `
 }   
