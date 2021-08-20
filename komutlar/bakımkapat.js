@@ -1,5 +1,5 @@
 module.exports = {
-  name:"bakımkapat",
+  name:"bakım-kapat",
   code:`
 $author[$userTag;$authorAvatar]
 $description[Bakım Modu Kapatılmıştır $customEmoji[yesiltik]

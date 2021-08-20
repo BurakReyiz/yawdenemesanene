@@ -1,11 +1,11 @@
 module.exports = {
-  name:"bakımaç",
+  name:"bakım-aç",
   code:`
 $author[$usertag;$authorAvatar]
 $if[$message[1]==;aç]
 Bakım Modu Açılmıştır $customEmoji[yesiltik]
 Bütün Komutlar Kullanıma Kapatılmıştır. $customEmoji[yukleniyor2]
-$customEmoji[pepe_exit]Kapatmak İçin $getServerVar[prefix]bakımkapat Yazman Yeterli Kurucum $customEmoji[siyahkraltaci]]
+$customEmoji[pepe_exit]Kapatmak İçin $getServerVar[prefix]bakım-kapat Yazman Yeterli Kurucum $customEmoji[siyahkraltaci]]
 $setVar[bakım;yes]
 $onlyIf[getVar[bakım]==no;Zaten Bakımdayım
 $endif
