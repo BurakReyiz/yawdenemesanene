@@ -16,5 +16,5 @@ $argsCheck[>1;:x: | Banlanan kişinin ID'sini yazmasılın.]
 $onlyPerms[ban;:x: | **Bu komut için __Üyeleri Yasakla__ yetkin olması lazım.**]
 $onlyBotPerms[ban;:x: | **Bu komut için __Üyeleri Yasakla__ yetkimin olması lazım.**]
 $suppressErrors[:x: | Böyle bir ID'li kullanıcı yok.]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
 `})

@@ -11,7 +11,7 @@ $customEmoji[gelengiden] [Davet Linkim](https://discord.com/oauth2/authorize?cli
 
 > **📚 Tepkiye Basarak Yardım Menüsünü Girebilirsiniz 📚**}{footer:Mixden Yardım Menüsü}{thumbnail:$authorAvatar}{delete:12s}{color:$getServerVar[hex]}
 ;yes]; ] 
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
 
   `
   }

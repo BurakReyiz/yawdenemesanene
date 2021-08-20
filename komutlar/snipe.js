@@ -10,6 +10,6 @@ module.exports = {
 $color[$getServerVar[hex]]
 $onlyIf[$getServerVar[zerotwo]!=;:x: | **Bir mesaj kaydedilmemiş.**]
 $onlyIf[$hasPerms[$authorID;admin]!=false;Bu komutu kullanabilmek için **Yönetici** yetkisine sahip olmalısın]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
 `
 }

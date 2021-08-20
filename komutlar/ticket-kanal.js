@@ -15,7 +15,7 @@ $color[RANDOM]
 $onlyIf[$hasPerms[$authorID;admin]!=false;:x: | Üzgünüm Bu Komut İçin \`Yönetici\` yetkin olması lazım.]
 $endif
 $onlyIf[$message[1]!=;:x: | \`$getServerVar[prefix]ticket-kanal ayarla | $getServerVar[prefix]ticket-kanal sıfırla\`]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
 `
   
 })
