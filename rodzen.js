@@ -762,6 +762,7 @@ bot.variables({
   sayaç:"0",
   s:"kapalı",
   otorolk:"",
+  bakım:"no",
   otorolb:"",
   otorol:"",
   eklog:"",
