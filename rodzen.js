@@ -118,7 +118,7 @@ $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, 
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`7\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
-$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`14\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex\`]
+$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`15\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
 $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek\`]
   $color[$getServerVar[hex]] 
@@ -236,7 +236,7 @@ $createObject[{}]
 $textSplit[$messageSlice[1];|]
 $setservervar[otocevapw;0]
 $onlyIf[$charCount[$messageSlice[1]]<201;❌ Otocevap komut/cevap karakter limiti en fazla 200 olabilir.]
-$onlyIf[$checkContains[$toLowercase[$message;|]]==true;❌ Doğru kullanım -> **otocevap aç/kapat komut|komut kullanıldığında verilecek cevap**]
+$onlyIf[$checkContains[$toLowercase[$message;|]]==true;❌ Doğru kullanım -> **otocevap aç/kapat komut|komut kullanıldığında verilecek cevap** (Komutun yanına | çizgisini Eklemeyi Unutmayın!)]
 $onlyIf[$charCount[$getservervar[otocevap]]<750;❌ Otocevap sınırını doldurmuşsun.]
 $elseIf[$message[1]==kapat]
 $channelsendMessage[$channelid;\`\`$messageSlice[1]\`\` otocevabı başarıyla kaldırıldı!;no]
@@ -250,7 +250,7 @@ $setservervar[otocevapw;1]
 $endelseIf
 $endif
 $setservervar[otocevapw;1]
-$onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar **aç** ve **kapat'tır**.]
+$onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar **aç** ve **kapat**'tır.]
 $onlyPerms[manageserver;❌ Bu komudu kullanabilmek için **Sunuyu Yönet** yetkisine sahip olmalısın.]`
 })
 bot.command({
