@@ -224,6 +224,46 @@ $onlyIf[$isNumber[$message]!=false;Bir sayı girmelisin]
 $argsCheck[1;Lütfen bir ses seviyesi gir]
 $onlyForIDs[$getServerVar[şarkı];Bu komutu sadece şarkıyı başlatan $userTag[$getServerVar[şarkı]] kullanıcısı kullanabilir]`
 });
+bot.command({
+  name:"otocevap",
+   code:`
+$if[$message[1]==aç]
+$channelsendMessage[$channelid;Başarıyla \`\`$splitText[1]\`\` otocevap komudu olarak ayarlandı!Artık herhangi bir kullanıcı \`\`$splittext[1]\`\` yazınca \`\`$splittext[2]\`\` olarak karşılık vereceğim!;no]
+$textSplit[$messageSlice[1];|]
+$setservervar[otocevap;$getobjectproperty[kurulum] |$splitText[1]|$splitText[2]|]
+$addObjectProperty[kurulum;$getServerVar[otocevap]]
+$createObject[{}]
+$textSplit[$messageSlice[1];|]
+$setservervar[otocevapw;0]
+$onlyIf[$charCount[$messageSlice[1]]<201;❌ Otocevap komut/cevap karakter limiti en fazla 200 olabilir.]
+$onlyIf[$checkContains[$toLowercase[$message;|]]==true;❌ Doğru kullanım -> \`\`otocevap aç/kapat komut|komut kullanıldığında verilecek cevap\`\`]
+$onlyIf[$charCount[$getservervar[otocevap]]<750;❌ Otocevap sınırını doldurmuşsun.]
+$elseIf[$message[1]==kapat]
+$channelsendMessage[$channelid;\`\`$messageSlice[1]\`\` otocevabı başarıyla kaldırıldı!;no]
+$setservervar[otocevapw;0]
+$setServerVar[otocevap;$replaceText[$getservervar[otocevap];$getobjectproperty[alım];;-1]]
+$addObjectProperty[alım;|$splitText[$sum[$findTextSplitIndex[$messageSlice[1]];0]]|$splitText[$sum[$findTextSplitIndex[$messageSlice[1]];1]]|]
+$createObject[{}]
+$onlyIf[$checkContains[$joinSplitText[];$messageSlice[1]]==true;❌ \`\`$messageslice[1]\`\` adlı bir otocevap komudu bulamadım.]
+$textSplit[$getservervar[otocevap];|]
+$setservervar[otocevapw;1]
+$endelseIf
+$endif
+$setservervar[otocevapw;1]
+$onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar \`\`aç\`\` ve \`\`kapat\`\`tır.]
+$onlyPerms[manageserver;❌ Bu komudu kullanabilmek için **Sunuyu Yönet** yetkisine sahip olmalısın.]`
+})
+bot.command({
+   name:"$alwaysExecute",
+   code:`
+$splitText[$sum[$findTextSplitIndex[$message];1]]
+$onlyIf[$findTextSplitIndex[$message]!=0;]
+$textSplit[$getservervar[otocevap];|]
+$onlyIf[$getservervar[otocevap]!=;]
+$onlyIf[$getservervar[otocevapw]!=1;]
+`,
+   nonPrefixed: true
+})
 
 bot.awaitedCommand({
   name:"zuzia",
@@ -580,6 +620,8 @@ bot.variables({
   kayıtsız:"",
   yetkili:"",
   kkanal:"",
+  otocevap:"",
+  otocevapw:"0",
   klog:"",
   lengel:"kapalı",
   afks: "", 

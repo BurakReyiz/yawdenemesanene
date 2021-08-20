@@ -1,7 +1,7 @@
 module.exports = {
 name:"toppre",
 code:`
-$title[Selam]
+$title[Mixden Premium Sistemi]
 $color[$getServerVar[hex]]
 $description[
 **Şuanda Toplam \`$getVar[presayı]\` Premium Üyem Var**
