@@ -1,5 +1,5 @@
 module.exports = {
-name:"",
+name:"yavaş-mod",
 code:`
 ✅ <#$channelID> Adlı Kanalda Yavaş Mod \`$message[1]\` Olarak Ayarlandı
 $onlyIf[$isNumber[$message[1]]!=false;Bir Sayı Yazın]
