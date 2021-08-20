@@ -872,7 +872,3 @@ bot.variables ({
 premium:"no",
 presayı:"0",
 })
-bot.variables({
-karaliste:"no",
-ksebep:""
-})
