@@ -21,7 +21,5 @@ $channelSendMessage[$channelID;** Üyeden Premium Alındı**]
 $onlyForIDs[$botOwnerID;Sadece Sahibim Premium Alabilir]
 
 $onlyIf[$mentioned[1]!=;Kimden Premium Almalıyım]
-
-$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
 `
 }

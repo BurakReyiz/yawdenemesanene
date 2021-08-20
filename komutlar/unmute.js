@@ -17,5 +17,5 @@ $onlyIf[$hasRole[$authorID;$getServerVar[myetkili]]!=false;:x: | $roleName[$getS
 $onlyIf[$hasPerms[$clientID;manageroles]!=false;:x: | Rolleri yönet yetkim yok.]
 $onlyIf[$getServerVar[mrol]!=;Mute rol ayarlanmamış.]
 $onlyIf[$getServerVar[myetkili]!=;:x: | Mute yetkili rol ayarlanmamış.]
-$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `})

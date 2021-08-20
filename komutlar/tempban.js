@@ -10,6 +10,6 @@ $onlyIf[$mentioned[1]!=:negative_squared_cross_mark: Kimi Banlamalıyım?]
 $onlyIf[$message!=;:warning: **Kullanım:** md!tempban @kullanıcı ]
 $onlyBotPerms[ban;:warning: Bunun için botun \`Üyeleri Yasakla\` izni olmalı]
 $onlyPerms[ban::negative_squared_cross_mark: Bunun için \`Üyeleri Yasakla\` İznin Olmalı]
-$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }
