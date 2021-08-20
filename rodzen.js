@@ -58,12 +58,6 @@ $getServervar[prefix]reroll <mesaj idsi>
 $suppressErrors
    `
    })
-module.exports = {
-name:"invite-kanal",
-code:`
-İnvite Kanalı <#$mentionedChannels[1]> Olarak Ayarlandı
-$setServerVar[invite;$mentionedChannels[1]]
-$onlyPerms[admin;Bunun İçin \`Yönet
 bot.command({
     name: "çekiliş",
     code: `
@@ -122,6 +116,22 @@ $onlyIf[$getServerVar[kengel]!=kapalı;Bu Zaten Kapalı]
 $endif
 $onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]!=false;Lütfen **aç** veya **kapat** yaz]
 `})
+bot.leaveCommand({
+channel:"$getServerVar[invite]",
+code:`
+$title[Mixden İnvite Sistemi]
+$description[ **\`$username\` Sunucumuzdan Ayrıldı
+Onu Davet Eden: \`$username[$userInfo[inviter]]\`
+Kalan Toplam Daveti: \`$userInfo[real;$userInfo[inviter]]\` 
+Şuanda \`$membersCount\` Kişiyiz!**]
+$footer[Mixden İnvite Sistemi;$serverIcon]
+$thumbnail[$authorAvatar]
+$suppressErrors[$username Sunucudan Çıktı Kullanıcıyı Kimin Davet Ettiğini Bulamadım]
+$suppressErrors`
+}) 
+bot.onJoined()
+bot.onInviteCreate()
+bot.onInviteDelete()
 bot.command({
 name:"$alwaysExecute",
 code:`
@@ -133,6 +143,20 @@ $onlyIf[$hasPerms[$authorID;admin]!=true;]
 $onlyIf[$getServerVar[kengel]!=kapalı;]
 `
 })
+bot.joinCommand({
+channel:"$getServerVar[invite]",
+code:`
+$title[Mixden İnvite Sistemi]
+$description[**\`$username\` Sunucumuza Katıldı
+Onu Davet Eden: \`$username[$userInfo[inviter]]\`
+Toplam Davet Sayısı: \`$userInfo[real;$userInfo[inviter]]\` 
+Şuanda \`$membersCount\` Kişiyiz!**]
+$footer[Mixden İnvite Sistemi;$serverIcon]
+$thumbnail[$authorAvatar]
+$suppressErrors
+`
+})  
+bot.onLeave
 bot.command({
   name:"$alwaysExecute",
   aliases:['<@!$clientID>', '<@$clientID>'],
@@ -780,6 +804,7 @@ bot.variables({
   cekilis:"undefined",
   otocevap:"",
   otocevapw:"0",
+  invite:"",
   klog:"",
   lengel:"kapalı",
   afks: "", 
