@@ -83,7 +83,7 @@ name:"rank",
 aliases:"level",
 code:`
 $author[$userTag[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
-$description[**$userTag[$mentioned[1;yes]]** Adlı Kullanıcının Seviyesi **$getServerVar[analvl;$authorID]**]
+$description[$customEmoji[zil2] **$userTag[$mentioned[1;yes]]** Adlı Kullanıcının Seviyesi **$getServerVar[analvl;$authorID]**]
 $color[RANDOM]
 $thumbnail[$userAvatar[$mentioned[1;yes]]]
 `
