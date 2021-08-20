@@ -2,7 +2,8 @@ module.exports = {
 name:"erkek",
 aliases:["adam","e"],
 code:`
-$channelSendMessage[$channelID;{author:$userTag[$mentioned[1]]:$userAvatar[$mentioned[1]]}{description:<@$mentioned[1]> Adlı üye kayıt edildi
+$channelSendMessage[$channelID;{author:$userTag[$mentioned[1]]:$userAvatar[$mentioned[1]]}{description:
+<@$mentioned[1]> Adlı üye kayıt edildi
 
 Kayıt eden yetkili: <@$authorID>
 
@@ -26,5 +27,6 @@ $onlyIf[$getServerVar[erol]!=;⚠️ Erkek üye rolü ayarlanmamış ayarlamak i
 $onlyIf[$getServerVar[kayıtsız]!=;⚠️ Kayıtsız rolü ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
 $onlyIf[$getServerVar[kkanal]!=;⚠️ Kayıt kanalı ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
 $onlyIf[$getServerVar[klog]!=;⚠️ Kayıt logu ayarlanmamış ayarlamak için **!ks-ayarla** yazın]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }   

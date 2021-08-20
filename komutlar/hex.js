@@ -16,6 +16,7 @@ $description[Yeni hex kodu: $message[2]]
   $onlyIf[$checkContains[$toLowercase[$message[1]];ayarla;sıfırla]==true;⚠️ Bir arguman girmelisin argumanlar: \`$getServerVar[prefix]hex ayarla <hex-kodu> | $getServerVar[prefix]hex sıfırla\`
  __**ÖRNEK:**__ \`\`\`fix
   $getServerVar[prefix]hex ayarla $randomText[ffdbfe;ffccff;303136;313131]
+  $onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
   \`\`\`
   
   ] 

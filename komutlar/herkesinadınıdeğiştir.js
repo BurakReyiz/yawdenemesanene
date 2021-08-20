@@ -6,6 +6,7 @@ module.exports = {
   $onlyIf[$charCount[$message]<=32;:x: | 32'den fazla karakter giremezsin]
   $onlyIf[$message[1]!=;:x: | **Bir nick yazmalısın**]
   $onlyIf[$authorID==$ownerID;:x: | **Bunun komut için __SUNUCU SAHİBİ__ olmalısın.**]
+  $onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
   `
 };
-//harbi neden böyle bir komut var
+

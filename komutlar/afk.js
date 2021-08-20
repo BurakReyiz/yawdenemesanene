@@ -11,6 +11,6 @@ $customEmoji[duyuru] Etiketlediğiniz Kişi \`$replaceText[$replaceText[$replace
 $color[BDAAF9]
 $onlyIf[$getGlobalUserVar[afk;$mentioned[1]]==evet;]
 $suppressErrors
-
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })

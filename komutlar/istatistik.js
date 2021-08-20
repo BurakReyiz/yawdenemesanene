@@ -32,5 +32,6 @@ $customEmoji[enerji] • Linkler: **
 $footer[Mixden İstatistik Menüsü;$authorAvatar]
 $thumbnail[$userAvatar[$clientID]]
 $color[RANDOM]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }
