@@ -757,6 +757,7 @@ bot.variables({
   eklog:"",
   erol:"",
   krol:"",
+  bakım:"hayır",
   kayıtsız:"",
   yetkili:"",
   kkanal:"",
