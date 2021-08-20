@@ -31,6 +31,6 @@ $setServerVar[klog;$mentionedChannels[1]]
 $onlyIf[$mentionedChannels[1]!=;⚠️ Bir kanal etiketle]
 $onlyIf[$checkContains[$toLowercase[$message[1]];kızrol;erkekrol;kayıtsız;yetkili;kayıtkanal;kayıtlog]==true;⚠️ Bir arguman girmelisin argumanlar: **erkekrol , kızrol , kayıtsız , yetkili , kayıtkanal , kayıtlog** \`Örn:\` **!ks-ayarla kızrol @kızrolü**] 
 $onlyPerms[admin;⚠️ Bunun için **Yönetici** iznin olmalı]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm bakımdayım]
 `
 }   

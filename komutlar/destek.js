@@ -12,6 +12,6 @@ $customEmoji[katil2] [Destek Sunucumuz](https://discord.gg/QtffYC2Ubd)
 ]
 $footer[Mixden Destek Sunucusu]
 $color[RANDOM]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm Bakımdayım.]
 `
 }

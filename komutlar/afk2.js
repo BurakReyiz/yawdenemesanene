@@ -19,6 +19,6 @@ $onlyIf[$getGlobalUserVar[afkc]==2;]
 $setGlobalUserVar[afkc;$sum[$getGlobalUserVar[afkc];1]]
 $onlyIf[$getGlobalUserVar[afk;$authorid]==evet;]
 $suppressErrors
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
+$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm Bakımdayım.]
 `
 })
