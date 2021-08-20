@@ -42,6 +42,64 @@ $onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı]
 `
 }
 bot.command({
+    name: "reroll",
+    code: `
+$setServerVar[cekilis;undefined]
+$editMessage[$message[1];{title:Çekiliş Bitti 🎉}{description:Ödül: \`$messageSlice[1]\` 🎉
+   Yapan Kişi: **$userTag[$authorID]**
+   Kazanan: $replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;hiçbiri, yeterli katılımcı yoktu.];false;<@$randomText[$joinSplitText[;]]>.]}{color:RANDOM}{footer: Çekiliş Sona Erdi.:$authorAvatar}]
+   $channelSendMessage[$channelID;$replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;Yeterli katılımcı yoktu.];false;Kazanan: <@$randomText[$joinSplitText[;]]>, Tebrikler!]]
+$removeSplitTextElement[$findTextSplitIndex[$clientID]]
+$textSplit[$replaceText[$getReactions[$channelID;$message[1];🎉;id];$clientID,;];,]
+   $onlyIf[$isNumber[$message[1]]!=false;{title: Yanlış Kullanım}{description:Yeni girdiğiniz mesaj ID'si. Bu örneği izleyin:
+   \`\`\`
+$getServervar[prefix]reroll <mesaj idsi>
+   \`\`\`}{color:RED}]
+$suppressErrors
+   `
+   })
+bot.command({
+    name: "çekiliş",
+    code: `
+$editMessage[$getServerVar[cekilis];{title:Çekiliş Bitti 🎉}{description:Ödül: \`$messageSlice[1]\` 🎉
+   Yapan Kişi: **$userTag[$authorID]**
+   Kazanan: $replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;hiçbiri, yeterli katılımcı yoktu.];false;<@$randomText[$joinSplitText[;]]>.]}{color:RANDOM}{footer: Çekiliş Sona Erdi.:$authorAvatar}]
+   $channelSendMessage[$channelID;$replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;Yeterli katılımcı yoktu.];false;Ödül: \`$messageSlice[1]\` Kazanan: <@$randomText[$joinSplitText[;]]>, Tebrikler!]]
+$removeSplitTextElement[$findTextSplitIndex[$clientID]]
+$textSplit[$replaceText[$getReactions[$channelID;$getServerVar[cekilis];🎉;id];$clientID,;];,]
+   $wait[$message[1]]
+   $setTimeout[$message[1];Kazanan: <@$randomText[$joinSplitText[;]]>
+kanal: $channelID
+emoji: 🎉
+ödül: $messageSlice[1]
+yapan: $userTag[$authorID]]
+   $setServerVar[cekilis;$sendMessage[{title: Çekilişe Katılmak için  🎉 Emojisine Tıkla !.}{description: 🎉 Ödül: \`$messageSlice[1]\` 🎉
+   Yapan Kişi: **$userTag[$authorID]**
+   Süre: **$message[1]**}{timestamp}{color:RED}{reactions:🎉};yes]]
+   $onlyIf[$messageSlice[1]!=;{title:Argümanlar Aranıyor}{description:Çekiliş için herhangi bir ödül koymadınız Bu Formatı Takip Edin: 
+   \`\`\`
+   - $getServerVar[prefix]çekiliş <süre> <ödül>.\`\`\`
+   \`<> Yazmayın \`
+   }{color:ORANGE}]
+   $onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$message[1];s;];m;];h;];d;]]!=false;{title: Yanlış Kullanım}{description:Yeni girdiğiniz saat biçimi geçersiz.}{color:RED}]
+   $onlyIf[$message[2]!=;{title: Yanlış Kullanım}{description:Bir çekiliş sebebi belirtmediniz Bu örneği izleyin:
+    \`\`\`
+    $getServerVar[prefix]çekiliş <süre> <sebep>
+    \`\`\`}{color:RED}]
+   $onlyPerms[admin;{title:Yetkin Yok}{description:Senin \`YÖNETİCİ\` Yetkin Yok.}{color:RED}]
+$suppressErrors`
+   })
+bot.timeoutCommand({
+    channel:"$timeoutData[kanal]",
+    code:`$editMessage[$getServerVar[cekilis];{title:Çekiliş Bitti 🎉}{description:Ödül: \`$timeoutData[ödül]\` 🎉
+   Yapan Kişi: **$timeoutData[yapan]**
+   Kazanan: $replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;hiçbiri, yeterli katılımcı yoktu.];false;<@$randomText[$joinSplitText[;]]>.]}{color:RANDOM}{footer: Çekiliş Sona Erdi.:$authorAvatar}]
+   $channelSendMessage[$channelID;$replaceText[$replaceText[$checkCondition[$getTextSplitLength==1];true;Yeterli katılımcı yoktu.];false;Ödül: \`$timeoutData[ödül]\` Kazanan: <@$randomText[$joinSplitText[;]]>, Tebrikler!]]
+$removeSplitTextElement[$findTextSplitIndex[$clientID]]
+$textSplit[$replaceText[$getReactions[$timeoutData[kanal];$getServerVar[cekilis];$timeoutData[emoji];id];$clientID,;];,]
+$suppressErrors`
+})
+bot.command({
 name:"küfür-engel",
 code:`
 $if[$message[1]==aç]
@@ -209,7 +267,7 @@ $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, 
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`8\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
-$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`16\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru\`]
+$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`17\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru, \`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
 $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek | Müzik\`]
   $color[$getServerVar[hex]] 
@@ -712,6 +770,7 @@ bot.variables({
   kayıtsız:"",
   yetkili:"",
   kkanal:"",
+  cekilis:"undefined",
   otocevap:"",
   otocevapw:"0",
   klog:"",
