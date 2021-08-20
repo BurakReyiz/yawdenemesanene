@@ -50,7 +50,7 @@ $onlyIf[$checkContains[$toLowercase[$message;<@$clientID>;<@!$clientID>]]==true;
   nonPrefixed: true
 })
 bot.readyCommand({
-name:"nebakıyonkardeşsimitvarpoğçavar",
+name:"BotHazırKomutu",
 code:`
 $log[Bot Başarıyla Açıldı]
 $wait[1s]
@@ -138,7 +138,28 @@ $onlyPerms[admin;❌ Bunun İçin \`Yönetici\` İznin Olmalı]
 $onlyIf[$getServerVar[saas]!=açık;⚠ Bu Sistem Zaten Açık]
 `
 })
+bot.command({
+name:"dm-duyuru",
+code:`
+Dm Açık Olan Herkese Duyurunuz İletiliyor
 
+$forEachMember[dmduyuru]
+$onlyPerms[admin;Bunun İçin \`Yönetici\` İznin Olmalı]
+$onlyIf[$message!=;Bir Duyuru Mesajı Gir]
+`})
+bot.awaitedCommand({
+name:"dmduyuru",
+code:`
+$dm[$authorID]
+$title[Selam Bir Duyuru Var]
+$description[Duyurunun Yapıldığı Sunucu: \`$serverName[$guildID]\`
+
+Duyuru: **$message**]
+$color[FFFFFF]
+$footer[Mixden Duyuru Sistemi]
+$suppressErrors
+`
+})
 bot.command({
 name:"saas-kapat",
 code:`
