@@ -30,17 +30,6 @@ for(const file of reader) {
      })
                
   }
-module.exports = {
-name:"slowmode",
-code:`
-✅ <#$channelID> Adlı Kanalda Yavaş Mod \`$message[1]\` Olarak Ayarlandı
-$onlyIf[$isNumber[$message[1]]!=false;Bir Sayı Yazın]
-$onlyIf[$message[1]!=;**Kullanım**: {prefix}slowmode 5]
-$slowmode[$channelID;$message[1]s]
-$onlyPerms[managechannels;Yetkin Yok Baka!]
-$onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı] 
-`
-}
 bot.command({
     name: "reroll",
     code: `

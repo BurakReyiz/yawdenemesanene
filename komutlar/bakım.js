@@ -4,7 +4,7 @@ code:`
 $if[$message[1]==aç]
 ✔️ Bakım açıldı Artık Komutlar Kullanılamaz Durumda
 $setVar[bakım;no]
-$onlyIf[$getVar[bakım]==yes;⚠️ Zaten bakım'dayım] 
+$onlyIf[$getVar[bakım]==no;⚠️ Zaten bakım'dayım] 
 $endif
 $if[$message[1]==kapat]
 ✔️ Bakım kapatıldı artık komutlarım kullanılabilir
