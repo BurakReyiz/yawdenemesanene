@@ -10,6 +10,6 @@ module.exports = ({
   $color[RANDOM]
   $endif
   $onlyIf[$isTicket[$channelID]!=false;:x: | Burası ticket değil.]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
+  
 })

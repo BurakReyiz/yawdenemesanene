@@ -7,6 +7,5 @@ $onlyIf[$message[1]!=;**Kullanım**: {prefix}slowmode 5]
 $slowmode[$channelID;$message[1]s]
 $onlyPerms[managechannels;Yetkin Yok Baka!]
 $onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı] 
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }

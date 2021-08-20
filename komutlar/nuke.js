@@ -10,6 +10,5 @@ $wait[1s]
 $cloneChannel[$channelID]
 $onlyPerms[admin;managemessages;managechannels;:x: | **Bu komut için __Mesajları Yönet, Kanllarları Yönet ve Yönetici__ yetkin olması lazım.**]
 $onlyBotPerms[admin;managemessages;managechannels;:x: | **Bu komut için __Mesajları Yönet, Kanllarları Yönet ve Yönetici__ yetkimin olması lazım.**]
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 })

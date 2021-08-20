@@ -10,7 +10,5 @@ $customEmoji[emoji_97]Etiketlediğiniz kişinin AFK sebebi: \`$getGlobalUserVar[
 $customEmoji[duyuru] Etiketlediğiniz Kişi \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$parseDate[$math[$dateStamp-$getglobaluservar[afkss;$mentioned[1]]];time];and;ve;1];seconds;Saniye;1];minutes;Dakika;1];hours;Saat;1];days;Gün;1];weeks;Hafta;1];months;Ay;1];years;Yıl;1];second;Saniye;1];minute;Dakika;1];hour;Saat;1];day;Gün;1];week;Hafta;1];month;Ay;1];year;Yıl;1]\` süredir afk.]
 $color[BDAAF9]
 $onlyIf[$getGlobalUserVar[afk;$mentioned[1]]==evet;]
-$suppressErrors
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
-`
+$suppressErrors`
 })

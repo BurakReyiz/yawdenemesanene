@@ -26,6 +26,5 @@ module.exports = {
         ]
         $color[$getServerVar[hex]]
         $thumbnail[$serverIcon]
-        $onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
         `
 }

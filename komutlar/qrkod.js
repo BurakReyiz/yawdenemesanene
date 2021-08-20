@@ -7,7 +7,5 @@ $color[FF0000]
 $argsCheck[>1;Bir Mesaj Yaz!]
 $footer[$username Tarafından İstendi]
 $addTimestamp
-$deletecommand
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
-`
+$deletecommand`
 })

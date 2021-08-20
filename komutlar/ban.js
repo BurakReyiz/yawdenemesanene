@@ -15,7 +15,4 @@ $color[$getServerVar[hex]]
 $argsCheck[>1;:x: | Birini etiketlemelisin.]
 $onlyPerms[ban;:x: | **Bu komut için __Üyeleri Yasakla__ yetkin olması lazım.**]
 $onlyBotPerms[ban;:x: | **Bu komut için __Üyeleri Yasakla__ yetkimin olması lazım.**]
-$suppressErrors
-$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
-`
-})
+$suppressErrors`})

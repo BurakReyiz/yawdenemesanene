@@ -1,10 +1,15 @@
 module.exports = {
-  name:"bakım-aç",
+  name:"bakımaç",
   code:`
-$author[$userTag;$authorAvatar]
-$description[Bakım Modu Açılmışdır $customEmoji[yesiltik]
-Bütün Komutlar Kullanıma Kapanmışdır. $customEmoji[yukleniyor2]]
-$onlyIf[$getVar[bakım]==yes;:warning: Üzgünüm bakımdayım]
+$author[$usertag;$authorAvatar]
+$if[$message[1]==;aç]
+Bakım Modu Açılmıştır $customEmoji[yesiltik]
+Bütün Komutlar Kullanıma Kapatılmıştır. $customEmoji[yukleniyor2]
+$customEmoji[pepe_exit]Kapatmak İçin $getServerVar[prefix]bakımkapat Yazman Yeterli Kurucum $customEmoji[siyahkraltaci]]
+$setVar[bakım;yes]
+$onlyIf[getVar[bakım]==no;Zaten Bakımdayım
+$endif
+$setGlobalUserVar[bakım;evet;310301496824561666]
 $onlyForIDs[310301496824561666;Geliştiricim Değilsin]
 $footer[Mixden Bakım Sistemi]
-`} 
+`}
