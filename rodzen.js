@@ -236,7 +236,7 @@ $createObject[{}]
 $textSplit[$messageSlice[1];|]
 $setservervar[otocevapw;0]
 $onlyIf[$charCount[$messageSlice[1]]<201;❌ Otocevap komut/cevap karakter limiti en fazla 200 olabilir.]
-$onlyIf[$checkContains[$toLowercase[$message;|]]==true;❌ Doğru kullanım -> \`\`otocevap aç/kapat komut|komut kullanıldığında verilecek cevap\`\`]
+$onlyIf[$checkContains[$toLowercase[$message;|]]==true;❌ Doğru kullanım -> **otocevap aç/kapat komut|komut kullanıldığında verilecek cevap**]
 $onlyIf[$charCount[$getservervar[otocevap]]<750;❌ Otocevap sınırını doldurmuşsun.]
 $elseIf[$message[1]==kapat]
 $channelsendMessage[$channelid;\`\`$messageSlice[1]\`\` otocevabı başarıyla kaldırıldı!;no]
@@ -250,7 +250,7 @@ $setservervar[otocevapw;1]
 $endelseIf
 $endif
 $setservervar[otocevapw;1]
-$onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar \`\`aç\`\` ve \`\`kapat\`\`tır.]
+$onlyIf[$checkContains[$message[1];aç;kapat]==true;❌ Kullanılabilir ayarlar **aç** ve **kapat'tır**.]
 $onlyPerms[manageserver;❌ Bu komudu kullanabilmek için **Sunuyu Yönet** yetkisine sahip olmalısın.]`
 })
 bot.command({
