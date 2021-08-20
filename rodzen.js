@@ -58,6 +58,12 @@ $getServervar[prefix]reroll <mesaj idsi>
 $suppressErrors
    `
    })
+module.exports = {
+name:"invite-kanal",
+code:`
+İnvite Kanalı <#$mentionedChannels[1]> Olarak Ayarlandı
+$setServerVar[invite;$mentionedChannels[1]]
+$onlyPerms[admin;Bunun İçin \`Yönet
 bot.command({
     name: "çekiliş",
     code: `
