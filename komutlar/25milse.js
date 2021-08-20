@@ -3,6 +3,7 @@ module.exports = {
   code:`$argsCheck[>1;Birden fazla kelime yazmak için her kelimenin arasına + bırak]
 $color[$getServerVar[hex]]
 $deletecommand
+$onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm bakımdayım]  
 $title[25 mile's]
 $image[https://vacefron.nl/api/water?text=$message]
 $footer[$username[$authorID]#$discriminator[$authorID]]`

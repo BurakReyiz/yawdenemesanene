@@ -9,7 +9,7 @@ $customEmoji[welcome] [Destek Sunucum](https://discord.gg/QtffYC2Ubd)
 
 $customEmoji[gelengiden] [Davet Linkim](https://discord.com/oauth2/authorize?client_id=856499683929489438&scope=bot&permissions=0)
 
-> **📚 Tepkiye Basarak Yardım Menüsünü Girebilirsiniz 📚**}{footer:Mixden Yardım Menüsü}{thumbnail:$authorAvatar}{delete:12s}{color:$getServerVar[hex]}
+> **📚 Tepkiye Basarak Yardım Menüsünü Grebilirsiniz 📚**}{footer:Mixden Yardım Menüsü}{thumbnail:$authorAvatar}{delete:12s}{color:$getServerVar[hex]}
 ;yes]; ] 
 
   `

@@ -30,6 +30,17 @@ for(const file of reader) {
      })
                
   }
+module.exports = {
+name:"slowmode",
+code:`
+✅ <#$channelID> Adlı Kanalda Yavaş Mod \`$message[1]\` Olarak Ayarlandı
+$onlyIf[$isNumber[$message[1]]!=false;Bir Sayı Yazın]
+$onlyIf[$message[1]!=;**Kullanım**: {prefix}slowmode 5]
+$slowmode[$channelID;$message[1]s]
+$onlyPerms[managechannels;Yetkin Yok Baka!]
+$onlyBotPerms[managechannels;\`Kanalları Yönet\` İznim Olmalı] 
+`
+}
 bot.command({
     name: "reroll",
     code: `
@@ -256,7 +267,7 @@ $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, 
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`8\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
-$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`19\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru, çekiliş, yavaş-mod\`]
+$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`17\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru, Çekiliş\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
 $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek | Müzik\`]
   $color[$getServerVar[hex]] 
@@ -757,7 +768,6 @@ bot.variables({
   eklog:"",
   erol:"",
   krol:"",
-  bakım:"hayır",
   kayıtsız:"",
   yetkili:"",
   kkanal:"",
