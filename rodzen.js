@@ -511,7 +511,7 @@ bot.readyCommand({
   channel:"yarra",
   code:`
   $log[MERABALAR TEKRARDAN AKTİFİM -$userTag[$clientID]]
-   $log[Hello madıfakı -$userTag[$clientID]]
+   $log[Günaydın -$userTag[$clientID]]
    $joinVC[856229332468891658]
   `
   })
