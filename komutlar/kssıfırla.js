@@ -25,5 +25,5 @@ $if[$message[1]==kayıtlog]
 $setServerVar[klog;]
 $onlyIf[$checkContains[$toLowercase[$message[1]];kızrol;erkekrol;kayıtsız;yetkili;kayıtkanal;kayıtlog]==true;⚠️ Bir arguman girmelisin argumanlar: **erkekrol , kızrol , kayıtsız , yetkili , kayıtkanal , kayıtlog** \`Örn:\` **!ks-sıfırla kızrol**] 
 $onlyPerms[admin;⚠️ Bunun için **Yönetici** iznin olmalı]
-$onlyIf[$getVar[bakım]==no;warning Üzgünüm bakımdayım]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `}     

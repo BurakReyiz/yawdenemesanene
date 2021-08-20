@@ -6,7 +6,7 @@ $deletecommand
 $title[25 mile's]
 $image[https://vacefron.nl/api/water?text=$message]
 $footer[$username[$authorID]#$discriminator[$authorID]]
-$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm Bakımdayım.]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }
 

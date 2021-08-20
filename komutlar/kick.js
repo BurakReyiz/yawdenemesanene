@@ -16,5 +16,5 @@ $argsCheck[>1; :x: | Birini etiketlemelisin.]
 $onlyPerms[kick;:x: | **Bu komut için __Üyeleri At__ yetkin olması lazım.**]
 $onlyBotPerms[kick;:x: | **Bu komut için __Üyeleri At__ yetkimin olması lazım.**]
 $supperssError
-$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm bakımdayım]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `})

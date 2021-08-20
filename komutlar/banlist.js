@@ -10,6 +10,6 @@ $replaceText[$usersBanned;,;
 **==========================**]
 $color[$getServerVar[hex]]
 $onlyPerms[ban;:x: | **Bu komut için __ÜYELERİ YASAKLA__ iznin olmalı**]
-$onlyIf[$getVar[bakım]==no;:warning: Üzgünüm Bakımdayım.]
+$onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
 `
 }

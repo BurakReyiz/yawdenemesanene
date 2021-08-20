@@ -14,6 +14,6 @@ module.exports = {
   
   $endif
   $onlyIf[$hasPerms[$authorID;admin]!=false;:x: | **Bu komut için __YÖNETİCİ__ yetkin olması lazım.**]
-  $onlyIf[$getVar[bakım]==no;⚠️ Üzgünüm Bakımdayım.]
+  $onlyIf[$getGlobalUserVar[bakım;310301496824561666]!=evet;:lock: Bakım Modu Açık Lütfen Daha Sonra Tekrar Deneyiniz]
   `
 }
