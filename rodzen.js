@@ -101,55 +101,6 @@ $wait[1s]
 $log[veriler yükleniyor]
 `
 })
-
-module.exports = {
-name: "oylama",
-code:`
-$argsCheck[<1;**Lütfen Bir Oylama Sebebi Gir!** :___red___:]
-@everyone
-$author[OYLAMA!;$serverIcon]
-$description[
-**Oylamayı Yapan Kişi:** <@$authorID> 
-
-**Oylama Mesajı:**
-
-
-\`\`\`kt
-$message\`\`\`]
-$footer[$username, Oylamayı Başlattı...;$authorAvatar]
-$thumbnail[$userAvatar[BOTID]]
-$color[00FFF3]
-$addReactions[:yes:;:___red___:]
-$addTimestamp
-$onlyPerms[admin;{author:Hata!}
-{description:**Üzgünüm... Bu Komutu Kullanmak İçin** \`Yönetici\` **İznin Olması Gerekir!**}
-{color:RED}]
-$onlyIf[$message!=;**Lütfen Bir Mesaj Gir!**]` 
-
-}
-  module.exports = ({
-  name:"kilitle",
-  code:`
-  $reply[$messageID;Kanal Kilidi Açıldı;yes]
-  $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
-  $wait[$noMentionMessage[1]]
-  $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
-  $channelSendMessage[$channelID;{title:$username[$clientID] Kanal kilitleme sistemi}
-  {description:Başarıyla Kanal \`$noMentionMessage[1]\` süre boyunca kilitlendi
-  
-  Kilitlenen Kanal : <#$mentionedChannels[1;yes]>
-  Kilitleme Süresi : $replaceText[$replaceText[$replaceText[$noMentionMessage[1];s; Saniye];m; Dakika;];h; Saat]
-  Kilitleyen Yetkili : $userTag[$authorID]
-  Kilitleme Sebebi : $noMentionMessage[2]}
-  {color:303136}{thumbnail:$authorAvatar}]
-  $onlyIf[$mentionedChannels[1]!=;Lütfen bir Kanal etiketle]
-  $onlyIf[$checkContains[$toLowerCase[$noMentionMessage[1];<;#;>]];Lütfen Bir kanal etiketle]
-  $onlyIf[$isNumber[$noMentionMessage[1]]==false;Lütfen bir kanal etiketle]
-  $onlyIf[$checkContains[$toLowerCase[$noMentionMessage[1];s;m;d;h]]==true;Lütfen Geçerli Bir Süre Girin. \`1h, 5m 10s\` gibi]
-  $onlyPerms[managechannels;{title:Hata}{description:Bu komutu kullanabilmek için sunucuda **Kanalları Yönet** yetkisine sahip olman gerekiyor.}{color:RED}]
-  $argsCheck[>1;Süre Belirtmen Gerekiyor. Doğru kullanım : $getServerVar[prefix]kilitle #kanal süre]
-`
-  })
 bot.command({
 name:"saas-aç",
 code:`
@@ -162,7 +113,7 @@ $onlyIf[$getServerVar[saas]!=açık;⚠ Bu Sistem Zaten Açık]
 bot.command({
 name:"dm-duyuru",
 code:`
-Dm Açık Olan Herkese Duyurunuz İletiliyor
+Dm Açık Olan Herkese Duyurunuz İletiliyor $customEmoji[yukleniyo]
 
 $forEachMember[dmduyuru]
 $onlyPerms[admin;Bunun İçin \`Yönetici\` İznin Olmalı]
@@ -258,7 +209,7 @@ $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, 
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`8\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`9\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log\`]
-$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`15\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap\`]
+$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`16\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`5\`);\`qr, avatar, sunucu-bilgi, afk, tavsiye, istatistik\`]
 $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Destek | Müzik\`]
   $color[$getServerVar[hex]] 
