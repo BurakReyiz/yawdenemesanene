@@ -338,8 +338,8 @@ bot.awaitedCommand({
   name:"onay",
   code:`$author[Mixden Yardım Menüsü;$authorAvatar]
 $image[https://media.discordapp.net/attachments/837255566979235900/864783974807502888/standard_1.gif]
-$addField[$customEmoji[kafa_sallan_anime2] **Müzik** (\`8\`);\`müzik, play, sıralama, resume, loop, skip, leave, sound\`]
-$addField[$customEmoji[mavisiren] **Destek** (\`1\`);\`destek\`]
+$addField[$customEmoji[mavisiren] **Destek** (\`1\`);\`destek\`] 
+$addField[$customEmoji[kafa_sallan_anime2] **Müzik Komutları** (\`8\`);\`müzik, play, sıralama, resume, loop, skip, leave, sound\`]
 $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`2\`);\`emoji-koruma, link-engel\`]
 $addField[$customEmoji[paracklerr] **Ekonomi Komutlarım** (\`14\`);\`ekonomi-yardım, kimlik, cüzdan, günlük, cf, market, para-birimi, para al/ver, para yatır/çek, para-gönder, çalış, satın-al, envanter\`]
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`8\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde\`]
@@ -351,6 +351,7 @@ $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Kor
   $color[$getServerVar[hex]] 
   $thumbnail[$authorAvatar]`
 }) 
+//Hata nerde .d
 bot.awaitedCommand({
   name:"parzi",
   code:`
