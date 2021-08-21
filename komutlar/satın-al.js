@@ -4,7 +4,7 @@ module.exports = {
         $description[Başarılı bir şekilde su aldın. $multi[1;$message[2]] $getServerVar[pbirim] paran eksildi.]
         $setUserVar[para;$sub[$getUserVar[para;$authorID];$multi[1;$message[2]]];$authorID]
         $setUserVar[su;$sum[$getUserVar[su;$authorID];$message[2]];$authorID]
-        $color[303136]
+        $color[]
         $onlyIf[$getUserVar[para;$authorID]>=1;:x: | Yetersiz bakiye.]
          $onlyIf[$isNumber[$message[2]]!=false;:x: | Yazdığın şey sayı değil.]
 $endif
@@ -43,7 +43,7 @@ $setUserVar[rozet2;true;$authorID]
 $endif
 
 $onlyIf[$checkContains[$toLowercase[$message[1]];su;ayran;simit;rozet1;rozet2]==true;:x: | Doğru kulanım.
-\`?satın-al su 1 | ?satın-al ayran 1 | ?satın-al simit 1 | ?satın-al rozet1 | ?satın-al rozet2\`
+\`$getServerVar[prefix]satın-al su 1 | $getServerVar[prefix]satın-al ayran 1 | $getServerVar[prefix]satın-al simit 1 | $getServerVar[prefix]satın-al rozet1 | $getServerVar[prefix]satın-al rozet2\`
 ]
         `
 }
