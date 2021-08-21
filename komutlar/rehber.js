@@ -8,9 +8,7 @@ module.exports = {
 	$author[Mustik Rehber Menüsü;$authorAvatar]
 	$thumbnail[$userAvatar[$clientID]]
 	$description[
-Öncelikle selam <@$authorID>. Ekonomi Komutundan biraz bahsetmek gerekirse .
-Diğer botlardan ayıran özelliğini sorarsan bir çok bug önceden fixlenmiş. Ve çoğu şey hard üzerinedir.
-Mesela soygun komudu. Çoğu botta birisini soyduğunda kişinin tüm parasını alır. Ama bu botta bütün sistemler o kadar karmaşık ve farklı ki.
+Öncelikle selam <@$authorID>. Ekonomi Komutundan biraz bahsetmek gerekirse Güzel Bir Ekonomi Komutudur.
 Şimdi oyuna başlamak için **mkişilik** yazarak kendini belirle.
 Kötü bir adammı yoksa Kahramanmı olacağını belirle.
 Böylece ilk rozetini alacaksın.
