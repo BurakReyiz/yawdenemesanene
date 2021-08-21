@@ -1,4 +1,4 @@
-module.exports = {
+ = {
         name: "eval",
         code: `$eval[$message]
         $onlyIf[$message[1]!=; Kurucum Kod Girmeniz Gerkemektedir!]
