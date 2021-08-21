@@ -1,15 +1,19 @@
 module.exports = {
-        name: "para-gönder",
-        code: `
-        $description[<@$mentioned[1]> kişisine \`$message[2]\` $setServerVar[pbirim] miktarda para gönderildi.]
-        $color[303136]
-        $setUserVar[para;$sub[$getUserVar[para;$authorID];$message[2]];$authorID]
-        $setUserVar[para;$sub[$getUserVar[para;$mentioned[1]];$message[2]];$mentioned[1]]
-        $onlyIf[$getUserVar[para;$authorID]>=$message[2];:x: | Yetersiz bakiye.]
-        $onlyIf[$message[1]!=;:x: | Bir miktar girmelisin.]
-        $onlyIf[$mentioned[1]!=;:x: | Birini etiketle.]
-        $onlyIf[$mentioned[1]!=$authorID;:x: | Kendine para gönderemezsin.]
-        $onlyIf[$isBot[$mentioned[1]]!=true;:x: | Bir bota para gönderemezsin.]
-         $onlyIf[$isNumber[$message[2]]!=false;:x: | Yazdığın şey sayı değil.]
-        `
+    name:"gönder",
+    bkz:["Yardım etmek için fakir birisine para gönderebilirsiniz"],
+    aliases:["pay"],
+    code:`
+    \`$userTag[$mentioned[1]]\` kişisine \`$userTag[$authorID]\` tarafından \`$noMentionMessage[1]\` miktarında para verilmiştir.
+    $wait[1ms]
+    $setGlobalUserVar[coin;$sum[$getGlobalUserVar[coin;$mentioned[1]];$noMentionMessage[1]];$mentioned[1]]
+    $wait[1ms]
+    $setGlobalUserVar[coin;$sub[$getGlobalUserVar[coin;$authorID];$noMentionMessage[1]];$authorID]
+    $onlyIf[$checkCondition[$getGlobalUserVar[coin;$authorID]<$noMentionMessage[1]]!=true;Üzerinde yeterli miktarda para yok]
+    $onlyIf[$checkCondition[$noMentionMessage[1]<1]!=true;Girdiğin miktar ne 0 olmalı nede - sayılar olmalıdır.]
+    $onlyIf[$isNumber[$noMentionMessage[1]]!=false;Girdiğin miktar sayı cinsinden olmalıdır.]
+    $onlyIf[$noMentionMessage[1]!=;Miktar girmelisin]
+    
+    $onlyIf[$mentioned[1]!=$authorID;Kendine değil başkasına.]
+    $onlyIf[$mentioned[1]!=;Bunun için birini etiketlemelisin !]
+    `
 }

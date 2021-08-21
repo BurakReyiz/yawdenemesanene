@@ -1,7 +1,11 @@
 module.exports = {
-        name: "günlük",
-        code: `$description[$randomText[250;300;350;400] $getServerVar[pbirim] para günlük aldın. 12 saat sonra tekrar gel]
-        $setUserVar[para;$sum[$getUserVar[para;$authorID];$randomText[250;300;350;400]];$authorID]
-        $cooldown[12h;:x: | 12 saat'te bir günlük alabilirsin.]
-        $color[303136]`
+    name:"günlük",
+    bkz:["Günlük ödülünüzü verir"],
+    code:`
+    $setGlobalUserVar[coin;$sum[$getGlobalUserVar[coin;$authorID];$random[150;300]];$authorID]
+    $editIn[1s;Evet Günlük Sandık Açılıyor **5**;Evet Günlük Sandık Açılıyor **4**;Evet Günlük Sandık Açılıyor **3**;Evet Günlük Sandık Açılıyor **2**;Evet Günlük Sandık Açılıyor **1**;Ödülün $username = **$random[150;300]** Tebrikler :tada:]
+    Evet Günlük Sandık Açılıyor - **$username**
+    
+    $globalCooldown[24h;Ödülünüzü **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getCooldownTime[24h;globalUser;günlük;$authorID];s;];hour;Saat];minute;Dakika];econd;Saniye];and;]** sonra alabilirsiniz]
+    `
 }
