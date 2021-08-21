@@ -337,7 +337,7 @@ $image[https://media.discordapp.net/attachments/837255566979235900/8647839748075
 $addField[$customEmoji[mavisiren] **Destek** (\`1\`);\`destek\`] 
 $addField[$customEmoji[kafa_sallan_anime2] **Müzik Komutları** (\`8\`);\`müzik, play, sıralama, resume, loop, skip, leave, sound\`]
 $addField[$customEmoji[dikkatet] **Koruma Komutlarım** (\`3\`);\`emoji-koruma, link-engel, küfür-engel\`]
-$addField[$customEmoji[paracklarr] **Ekonomi Komutlarım** (\`14\`);\`ekonomi-yardım, kimlik, cüzdan, günlük, cf, market, para-birimi, para al/ver, para yatır/çek, para-gönder, çalış, satın-al, envanter\`]
+$addField[$customEmoji[paracklarr] **Ekonomi Komutlarım** (\`15\`);\`ekonomi-yardım, kimlik, cüzdan, günlük, cf, market, para-birimi, para al/ver, para yatır/çek, banka, para-gönder, çalış, satın-al, envanter\`]
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`8\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`12\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log, invite-sistemi, level-sistemi\`]
