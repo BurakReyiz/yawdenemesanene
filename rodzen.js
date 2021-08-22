@@ -273,7 +273,7 @@ bot.command({
 bot.awaitedCommand({
   name:"one",
   code:`
-  $editMessage[$message[1];{author:Mustik - Market:$authorAvatar}  {color:GREEN}
+  $editMessage[$message[1];{author:Mixden - Market:$authorAvatar}  {color:GREEN}
   {description:DUKE : Ne Almak İstersiniz
   $customEmoji[kilit] Padlock: Bunu Alarak Bankanı Süresiz Olarak Koruyabilirsin : Fiyatı \`5000\` | Kod: **1**
   $customEmoji[roket_gif]Banka Kapasitesi: Bunun alarak banka kapasitenizi yükseltebilirsiniz: Fiyatı \`5000\` | Kod: **2**
@@ -287,33 +287,32 @@ bot.awaitedCommand({
   :ring: Elmas Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`15000\` | Kod: **9**
  
  $customEmoji[asker]Koruma: Sokaktaki kötü hırsızlardan korumak için alabilirsin belki : Fiyatı: \`10000\` (24 Saatliktir) | Kod: **10**
- <:mhalat:862023703676321822>Halat: Kahramanların işine yarayabilir : Fiyatı: \`50\` | Kod: **11**
-  }{footer:Sayfa 1/3 | Satın Almak İçin msatınal <item kodu>:$authorAvatar}]
+ $customEmoji[halats]Halat: Kahramanların işine yarayabilir : Fiyatı: \`50\` | Kod: **11**
+  }{footer:Sayfa 1/3 | Satın Almak İçin $getServerVar[prefix]satınal <item kodu>:$authorAvatar}]
 `})
 bot.awaitedCommand({
   name:"two",
   code:`
-  $editMessage[$message[1];{author:Mustik - Avatar Market:$authorAvatar}  {color:GREEN}
+  $editMessage[$message[1];{author:Mixden - Avatar Market:$authorAvatar}  {color:GREEN}
   {description:DUKE : Ne Almak İstersiniz
   Avatar 1: <:avatar1:860093837014597632> | Fiyat: **2500** | Kod: **a1**
   Avatar 1: <:avatar2:860093885493149706> | Fiyat: **2500** | Kod: **a2**
   Avatar 1: <:avatar3:860093925645221898> | Fiyat: **2500** | Kod: **a3**
   Avatar 1: <:avatar4:860093961062318111> | Fiyat: **2500** | Kod: **a4**
   Avatar 1: <:avatar5:860093988894670868> | Fiyat: **2500** | Kod: **a5**
-*Avatarların tam listesi için **mavatarmarket***
   }
-{footer:Sayfa 2/3 | Satın Almak İçin msatınal <item kodu>:$authorAvatar}]
+{footer:Sayfa 2/3 | Satın Almak İçin $getServerVar[prefix]Satınal <item kodu>:$authorAvatar}]
 `})
 bot.awaitedCommand({
   name:"three",
   code:`
-  $editMessage[$message[1];{author:Mustik Boost - Market:$authorAvatar}  {color:GREEN}
+  $editMessage[$message[1];{author:Mixden Boost - Market:$authorAvatar}  {color:GREEN}
   {description:DUKE : Ne Almak İstersiniz
   **3 Saatlik 2x Kazanç** : 10 Mücevher 💎 | Kod: **m1**
   **1 Haftalık Koruma** : 5 Mücevher 💎 | Kod: **m2**
   
   }
-{footer:Sayfa 3/3 | Satın Almak İçin msatınal <item kodu>:$authorAvatar}]
+{footer:Sayfa 3/3 | Satın Almak İçin $getServerVar[prefix]satınal <item kodu>:$authorAvatar}]
 `})
 //MARKET SİSTEMİ
 
@@ -361,7 +360,7 @@ bot.awaitedCommand({
   {color:$replaceText[$replaceText[$replaceText[$getGlobalUserVar[kişilik;$mentioned[1;yes]];kahraman;GREEN];kötü;#bd0303];yok;BLACK]}
   {author:$username[$mentioned[1;yes]] Kişisinin IC Bilgileri:$userAvatar[$mentioned[1]]}
 {description:$if[$getGlobalUserVar[rozetler;$mentioned[1;yes]]==]
-  *Maalesef rozetin hiç yok.İlk rozetini mkişilik yazarak alabilirsin !*
+  *Maalesef rozetin hiç yok.İlk rozetini $getServerVar[prefix]Kişilik yazarak alabilirsin !*
   $endif
   $if[$getGlobalUserVar[rozetler;$mentioned[1;yes]]!=]
   **Sahip Olunan Rozetler =** $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rozetler;$mentioned[1;yes]];/; ];kahraman;<:mkahraman:857623416071913482>];kötü;<:mkotu:857623904733626398>];evilhero;:persevere:];ilk;:smiling_imp:];one;:slight_smile:];two;:confused:];old;☠️];developer;<:mdeveloper:859177958912163860>];hacker;🎩];sosyal;👥];bug;<:mbug:859788254794350622>];star;⭐]
