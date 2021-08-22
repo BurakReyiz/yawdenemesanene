@@ -1,5 +1,5 @@
 module.exports = {
-name:"kanal-log",
+name:"log",
 code:`
 $if[$message[1]==aç]
 ✔️ Kanal logu <#$mentionedChannels[1]> olarak ayarlandı
