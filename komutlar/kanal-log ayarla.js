@@ -1,16 +1,16 @@
 module.exports = {
 name:"log",
 code:`
-$if[$message[1]==aç]
-✔️ Kanal logu <#$mentionedChannels[1]> olarak ayarlandı
+$if[$message[1]==ayarla]
+✔️ Log <#$mentionedChannels[1]> olarak ayarlandı
 $setServerVar[modlog;$mentionedChannels[1]]
 $onlyIf[$mentionedChannels[1]!=;❗ bir kanal etiketlemelisin]
 $endif
 $if[$message[1]==kapat]
-✔️ Kanal logu kapatıldı
+✔️ Log kapatıldı
 $setServerVar[modlog;]
 $endif
-$onlyIf[$checkContains[$toLowercase[$message[1]];aç;kapat]==true;❗ **aç** veya **kapat** argumanlarını kullanın]
+$onlyIf[$checkContains[$toLowercase[$message[1]];ayarla;kapat]==true;❗ **ayarla** veya **kapat** argumanlarını kullanın]
 $onlyPerms[admin;❗ Bunun için  yetkin yok]
 `
 }   
