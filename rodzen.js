@@ -275,11 +275,11 @@ bot.awaitedCommand({
   code:`
   $editMessage[$message[1];{author:Mustik - Market:$authorAvatar}  {color:GREEN}
   {description:DUKE : Ne Almak İstersiniz
-  🔒 Padlock: Bunu Alarak Bankanı Süresiz Olarak Koruyabilirsin : Fiyatı \`5000\` | Kod: **1**
-  <:myukseltme:859357225163816970> Banka Kapasitesi: Bunun alarak banka kapasitenizi yükseltebilirsiniz: Fiyatı \`5000\` | Kod: **2**
+  $customEmoji[kilit] Padlock: Bunu Alarak Bankanı Süresiz Olarak Koruyabilirsin : Fiyatı \`5000\` | Kod: **1**
+  $customEmoji[roket_gif]Banka Kapasitesi: Bunun alarak banka kapasitenizi yükseltebilirsiniz: Fiyatı \`5000\` | Kod: **2**
   🔪 Bıçak: Kendini sokaktaki hırsızlardan korumak için alman gereklidir. : Fiyatı: \`50\` | Kod: **3**
   
-  <:mkarmaskesi:860079981392035851> Kar Maskesi: Yüzünü gizlemek için lazım olabilir. : Fiyatı: \`50\` | Kod: **4**
+  Kar Maskesi: Yüzünü gizlemek için lazım olabilir. : Fiyatı: \`50\` | Kod: **4**
   💻 Bilgisayar: İşlerini yapmakta yardımcı olabilir. : Fiyatı: \`10000\` | Kod: **5**
   💰 Çuval: Belki içine birşey koyarsın zamanında. : Fiyatı: \`15\` | Kod: **6**
   <:mgyuzuk:860824533405401108> Gümüş Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`3000\` | Kod: **7**
