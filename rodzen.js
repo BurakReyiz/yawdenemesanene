@@ -284,7 +284,7 @@ bot.awaitedCommand({
   💰 Çuval: Belki içine birşey koyarsın zamanında. : Fiyatı: \`15\` | Kod: **6**
   <:mgyuzuk:860824533405401108> Gümüş Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`3000\` | Kod: **7**
   <:mayuzuk:860824915551453215> Altın Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`8000\` | Kod: **8**
-  <:meyuzuk:860824583330332752> Elmas Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`15000\` | Kod: **9**
+  :ring: Elmas Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`15000\` | Kod: **9**
  
  <:mgardiyan:861319500585369640> Koruma: Sokaktaki kötü hırsızlardan korumak için alabilirsin belki : Fiyatı: \`10000\` (24 Saatliktir) | Kod: **10**
  <:mhalat:862023703676321822> Halat: Kahramanların işine yarayabilir : Fiyatı: \`50\` | Kod: **11**
