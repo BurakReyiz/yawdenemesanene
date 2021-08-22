@@ -4,7 +4,7 @@ module.exports = {
     code:`
     $if[$message==]
     $color[BLACK]  
-    $author[Ağın karanlık kısına hoşgeldin Anonim;$authorAvatar]
+    $author[Ağın karanlık kısına hoşgelin Anonim;$authorAvatar]
     $description[
     Satış Yeri
     IP Satma:
