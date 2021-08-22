@@ -372,7 +372,7 @@ bot.awaitedCommand({
   *Yaşın:* **$replaceText[$getGlobalUserVar[yaş;$mentioned[1;yes]];yok;Belirtilmemiş]**
   *Cinsiyet:* **$replaceText[$replaceText[$replaceText[$getGlobalUserVar[cinsiyet;$mentioned[1;yes]];yok;Belirtilmemiş];erkek;Erkek :man:];kadın;Kadın :woman:]**
   
-  *Aranma:* $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[aranma;$mentioned[1;yes]];yok;<:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];biraz;<:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];orta;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];çok;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915>];fazla;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460>]
+  *Aranma:* $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[aranma;$mentioned[1;yes]];yok;<:mbosyildiz:860458237127163915>];biraz;<:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];orta;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];çok;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915>];fazla;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460>]
     $replaceText[$replaceText[$checkCondition[$getGlobalUserVar[birlik;$mentioned[1;yes]]==yok];true;];false;*Birliğin:* **$getGlobalUserVar[birlik;$mentioned[1;yes]]**]
   *Seviye Bilgi:* **$getGlobalUserVar[seviye;$mentioned[1;yes]] |  $getGlobalUserVar[spuan;$mentioned[1;yes]]/$getGlobalUserVar[skpuan;$mentioned[1;yes]]** 
   *Paran:* **$truncate[$getGlobalUserVar[coin;$mentioned[1;yes]]]** | *Bankadaki Paran:* **$truncate[$getGlobalUserVar[bcoin;$mentioned[1;yes]]]/$getGlobalUserVar[bsınır;$mentioned[1;yes]]**
@@ -395,42 +395,6 @@ bot.awaitedCommand({
     *Discord İsmin:* **$username[$mentioned[1;yes]]**
     *Discord Etiketin:* **#$discriminator[$mentioned[1;yes]]**
     *Discord Kimliğin (ID):* **$mentioned[1;yes]**
-    
-    *İletişim Linkleri:*}
-    $if[$getGlobalUserVar[spotify;$mentioned[1;yes]]==yok]
-    {field:Spotify Girilmemiş:mpgüncelle ekle spotify <spotify adresiniz> ile güncelleyebilirsiniz:yes}
-    $endif
-    $if[$getGlobalUserVar[spotify;$mentioned[1;yes]]!=yok]
-    {field:Spotify :[Tıkla](https://open.spotify.com/user/$getGlobalUserVar[spotify;$mentioned[1;yes]]):yes}
-    $endif
-  
-    $if[$getGlobalUserVar[instagram;$mentioned[1;yes]]==yok]
-    {field:İnstagram Girilmemiş:mpgüncelle ekle instagram <instagram adresiniz> ile güncelleyebilirsiniz:yes}
-    $endif
-    $if[$getGlobalUserVar[instagram;$mentioned[1;yes]]!=yok]
-    {field:Instagram :[Tıkla](https://www.instagram.com/$getGlobalUserVar[instagram;$mentioned[1;yes]]):yes}
-    $endif
-    
-    $if[$getGlobalUserVar[youtube;$mentioned[1;yes]]==yok]
-    {field:YouTube Girilmemiş:mpgüncelle ekle youtube <youtube adresiniz> ile güncelleyebilirsiniz:yes}
-    $endif
-    $if[$getGlobalUserVar[youtube;$mentioned[1;yes]]!=yok]
-    {field:YouTube :[Tıkla](https://www.youtube.com/channel/$getGlobalUserVar[youtube;$mentioned[1;yes]]):yes}
-    $endif
-    
-    $if[$getGlobalUserVar[github;$mentioned[1;yes]]==yok]
-    {field:GitHub Girilmemiş:mpgüncelle ekle github <github adresiniz> ile güncelleyebilirsiniz:yes}
-    $endif
-    $if[$getGlobalUserVar[github;$mentioned[1;yes]]!=yok]
-    {field:GitHub :[Tıkla](https://github.com/$getGlobalUserVar[github;$mentioned[1;yes]]):yes}
-    $endif
-    
-    $if[$getGlobalUserVar[website;$mentioned[1;yes]]==yok]
-    {field:Site Girilmemiş:mpgüncelle ekle website <site adresiniz> ile güncelleyebilirsiniz:yes}
-    $endif
-    $if[$getGlobalUserVar[website;$mentioned[1;yes]]!=yok]
-    {field:Site :[Tıkla]($getGlobalUserVar[website;$mentioned[1;yes]]):yes}
-    $endif
 ]
 `})
 bot.awaitedCommand({
