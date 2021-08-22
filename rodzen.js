@@ -777,7 +777,7 @@ $addField[$customEmoji[paracklarr] **Ekonomi Komutlarım** (\`24\`);\`ekonomi-ya
 $addField[$customEmoji[giveaway] **Eğlence Komutlarım** (\`12\`);\`howgay, 25miles, palyaço, biden, rte, trump, kaçcm, clyde, rip, wasted, hearts, tigger\`]
 $addField[$customEmoji[asker] **Premium Komutlarım** (\`0\`);\`YAKINDA!\`]
 $addField[$customEmoji[kirmizi_siren] **Ayarlamalı Komutlarım** (\`12\`);\`hgbb-sistemi, mute-sistemi, ticket-sistemi, kayıt-sistemi, otorol, modlog, saas-aç, saas-kapat, tavsiye-log, invite-sistemi, level-sistemi\`]
-$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`17\`);\`ban, unban, kick, mute, unmute, banlist, herkese-rol-ver, herkesten-rol-al, herkesin-adını-değiştir, nuke, sil, snipe, prefix, hex, otocevap, dm-duyuru, çekiliş\`]
+$addField[$customEmoji[banned] **Moderasyon Komutlarım** (\`13\`);\`ban, unban, kick, mute, unmute, banlist, nuke, sil, snipe, prefix, hex, otocevap, çekiliş\`]
 $addField[$customEmoji[astronaut] **Genel Komutlarım** (\`6\`);\`qr, avatar, rank, sunucu-bilgi, afk, tavsiye, istatistik\`]
 $addField[**Toplam Komut** (\`$commandsCount\`);\`Moderasyon | Ayarlamalı | Koruma | Genel | Premium | Eğlence | Ekonomi | Destek | Müzik\`]
   $color[$getServerVar[hex]] 
