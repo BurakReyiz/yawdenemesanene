@@ -20,7 +20,7 @@ module.exports = {
     $customEmoji[ak471]$customEmoji[ak472]$customEmoji[ak473] AK-47:
     Bu taramalı silah belki bazı işler için işine yarayabilir | Fiyatı: \`50000\` | Kod: **3**
     ]
-    $footer[Almak İçin mdeepweb al <item kodu> | Satmak için mdeepweb sat <item kodu>;$authorAvatar]
+    $footer[Almak İçin $getServerVar[prefix]deepweb al <item kodu> | Satmak için $getServerVar[prefix]deepweb sat <item kodu>;$authorAvatar]
     $endif
     
     $if[$message[1] $message[2]==sat 1]
