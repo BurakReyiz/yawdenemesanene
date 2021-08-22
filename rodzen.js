@@ -233,7 +233,7 @@ bot.awaitedCommand({
   $suppressErrors
   $deleteMessage[$channelID;$message[1]]
   $sendDM[$authorID;{color:GREEN}{author:Rozet Kazanıldı.:$authorAvatar}
-  {description:Kazanılan Rozet - $customEmoji[mkahraman;856156367891070976]
+  {description:Kazanılan Rozet - :man_superhero:
   
   *Rozet Açıklaması = **Sende bir kahraman olabilirsin...***}]
 $setGlobalUserVar[rozetler;$getGlobalUserVar[rozetler;$authorID]kahraman/;$authorID]
@@ -252,7 +252,7 @@ $channelSendMessage[$channelID;Dünyayı ele geçirmede bol şans.{delete:5s}]
   $setGlobalUserVar[kişilik;kötü;$authorID]  
     $deleteMessage[$channelID;$message[1]]
  $sendDM[$authorID;{color:RED}{author:Rozet Kazanıldı.:$authorAvatar}
-  {description:Kazanılan Rozet - $customEmoji[mkotu;856156367891070976]
+  {description:Kazanılan Rozet - :man_supervillain:
   
   *Rozet Açıklaması = **Dünya sahtekar ve buna ayak uydurman gerekiyor***}]
   $setGlobalUserVar[rozetler;$getGlobalUserVar[rozetler;$authorID]kötü/;$authorID]
@@ -330,7 +330,7 @@ bot.command({
     *Maalesef rozetin hiç yok.İlk rozetini mkişilik yazarak alabilirsin !*
     $endif
     $if[$getGlobalUserVar[rozetler;$mentioned[1;yes]]!=]
-    **Sahip Olunan Rozetler =** $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rozetler;$mentioned[1;yes]];/; ];kahraman;<:mkahraman:857623416071913482>];kötü;<:mkotu:857623904733626398>];evilhero;:persevere:];ilk;:smiling_imp:];one;:slight_smile:];two;:confused:];old;☠️];developer;<:mdeveloper:859177958912163860>];hacker;🎩];sosyal;👥];bug;<:mbug:859788254794350622>];star;⭐]
+    **Sahip Olunan Rozetler =** $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rozetler;$mentioned[1;yes]];/; ];kahraman;:man_superhero:];kötü;:man_supervillain:];evilhero;:persevere:];ilk;:smiling_imp:];one;:slight_smile:];two;:confused:];old;☠️];developer;<:mdeveloper:859177958912163860>];hacker;🎩];sosyal;👥];bug;<:mbug:859788254794350622>];star;⭐]
     $endif
     **Senin Hakkında Bilgiler (IC)**
     $if[$getGlobalUserVar[durum;$mentioned[1;yes]]==kötü] \`Lakap: Kötü Kahraman\` $endif
