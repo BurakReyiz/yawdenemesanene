@@ -279,8 +279,8 @@ bot.awaitedCommand({
   $customEmoji[roket_gif]Banka Kapasitesi: Bunun alarak banka kapasitenizi yükseltebilirsiniz: Fiyatı \`5000\` | Kod: **2**
   🔪 Bıçak: Kendini sokaktaki hırsızlardan korumak için alman gereklidir. : Fiyatı: \`50\` | Kod: **3**
   
-  Kar Maskesi: Yüzünü gizlemek için lazım olabilir. : Fiyatı: \`50\` | Kod: **4**
-  💻 Bilgisayar: İşlerini yapmakta yardımcı olabilir. : Fiyatı: \`10000\` | Kod: **5**
+  $customEmoji[KarMaskesi]Kar Maskesi: Yüzünü gizlemek için lazım olabilir. : Fiyatı: \`50\` | Kod: **4**
+  $customEmoji[wumpus_klavye] Bilgisayar: İşlerini yapmakta yardımcı olabilir. : Fiyatı: \`10000\` | Kod: **5**
   💰 Çuval: Belki içine birşey koyarsın zamanında. : Fiyatı: \`15\` | Kod: **6**
   <:mgyuzuk:860824533405401108> Gümüş Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`3000\` | Kod: **7**
   <:mayuzuk:860824915551453215> Altın Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`8000\` | Kod: **8**
@@ -1254,8 +1254,8 @@ bot.status({
 bot.variables({
   prefix:"md!",
   hgbb:"",
-  bbtxt:"-isimt- Tekrar görüşmek üzere bb. ^^",
-  hgtxt:"-isimt- Hoş geldin umarım iyi vakit geçirsin. ^^",
+  bbtxt:"-isimt- Tekrar görüşmek üzere bb.",
+  hgtxt:"-isimt- Hoş geldin umarım iyi vakit geçirsin.",
   hgbbimage:"",
   şarkı:"",
   hex:"RANDOM",
@@ -1290,7 +1290,7 @@ bot.variables({
   su:"",
   simit:"",
   ayran:"",
-  pbirim:"€",
+  pbirim:"$",
   kayıtsız:"",
   level:"0",
   yetkili:"",
