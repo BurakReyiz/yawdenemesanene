@@ -6,18 +6,18 @@ module.exports = {
     $color[BLACK]  
     $author[Ağın karanlık kısına hoşgeldin Anonim;$authorAvatar]
     $description[
-    > Satış Yeri
-    > IP Satma:
+    Satış Yeri
+    IP Satma:
     Elde ettiğini IP'leri sisteme güzel bir fiyata satabilirsin | Satış Fiyatı: \`150-300 Arası\` | Kod: **1**
-    > Hesap Satma:
+    Hesap Satma:
     Elde ettiğin sosyal medya hesaplarını satabilirsin | Satış Fiyatı: \`Hesap Takipçisine Göre Değişir\` | Kod: **2**
-    > Alış Yeri
+    Alış Yeri
     
-    > <:msilah:860076464169680897> Desert Eagle:
+    <:msilah:860076464169680897> Desert Eagle:
     Silah işine yarayabilir | Fiyatı: \`10000\` | Kod: **1**
-    > 🧤 Eldiven:
+    🧤 Eldiven:
     Bu eldivenler ile her türlü parmak izini gizleyebilirsin | Fiyatı: \`100\` | Kod: **2**
-    > <:mak47:860190567610449951> AK-47:
+    $customEmoji[ak471]$customEmoji[ak472]$customEmoji[ak473] AK-47:
     Bu taramalı silah belki bazı işler için işine yarayabilir | Fiyatı: \`50000\` | Kod: **3**
     ]
     $footer[Almak İçin mdeepweb al <item kodu> | Satmak için mdeepweb sat <item kodu>;$authorAvatar]
