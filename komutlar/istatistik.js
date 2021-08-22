@@ -3,7 +3,7 @@ name:"i",
 aliases:["istatistik","istatistiks","stats","stat","i"],
 code:`
 $author[$userTag;$authorAvatar]
-$description[**Selam \`$userTag[$clientID]\` İşte Mixden'nin İstatistikleri
+$description[Selam \`$userTag[$clientID]\` İşte Mixden'nin İstatistikleri
 
 $customEmoji[sari1] • Sahibim: \`$userTag[$botOwnerID]\`
 $customEmoji[developer_yk] • Mixden Bot Yardımcısı: \`!         FK Yunus#0139\`
@@ -22,14 +22,13 @@ $customEmoji[sabit] • Oluşturma Tarihim: \`$replaceText[$replaceText[$replace
 
 $customEmoji[yukleniyo] • Uptime Sürem: \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$parseDate[$djseval[client.uptime;yes];time];hours;Saat;-1];minutes;Dakika;-1];seconds;Saniye;-1];hour;Saat;-1];minute;Dakika;-1];second;Saniye;-1];and;ve;-1]\`
 
-$customEmoji[renkli_kalp] • Toplam CPU Kullanımı: \`%$cpu\`
-$customEmoji[pembe_kelemek] • Toplam RAM Kullanımı: \`$ramMB\`
-
 $customEmoji[yesilyuklen] • Pingim: \`$ping.ms\`
 
 $customEmoji[zil] • Kütüphanem: \`AOI.js\`
 
-$customEmoji[enerji] • Linkler:** ** [Destek sunucum](https://discord.gg/QtffYC2Ubd) , [Davet linkim](https://discord.com/oauth2/authorize?client_id=$clientID&scope=bot&permissions=8 ) **]
+$customEmoji[enerji] • Linkler: 
+[Destek Sunucum](https://discord.gg/QtffYC2Ubd)
+[Davet Linkim](https://discord.com/oauth2/authorize?client_id=$clientID&scope=bot&permissions=8)]
 $footer[Mixden İstatistik Menüsü;$authorAvatar]
 $thumbnail[$userAvatar[$clientID]]
 $color[RANDOM]
