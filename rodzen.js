@@ -282,12 +282,12 @@ bot.awaitedCommand({
   $customEmoji[KarMaskesi]Kar Maskesi: Yüzünü gizlemek için lazım olabilir. : Fiyatı: \`50\` | Kod: **4**
   $customEmoji[wumpus_klavye] Bilgisayar: İşlerini yapmakta yardımcı olabilir. : Fiyatı: \`10000\` | Kod: **5**
   💰 Çuval: Belki içine birşey koyarsın zamanında. : Fiyatı: \`15\` | Kod: **6**
-  <:mgyuzuk:860824533405401108> Gümüş Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`3000\` | Kod: **7**
-  <:mayuzuk:860824915551453215> Altın Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`8000\` | Kod: **8**
+  $customEmoji[bronzyzk]Gümüş Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`3000\` | Kod: **7**
+  $customEmoji[goldyzk]Altın Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`8000\` | Kod: **8**
   :ring: Elmas Yüzük: Birine evlilik teklifi etmek istersin ? : Fiyatı: \`15000\` | Kod: **9**
  
- <:mgardiyan:861319500585369640> Koruma: Sokaktaki kötü hırsızlardan korumak için alabilirsin belki : Fiyatı: \`10000\` (24 Saatliktir) | Kod: **10**
- <:mhalat:862023703676321822> Halat: Kahramanların işine yarayabilir : Fiyatı: \`50\` | Kod: **11**
+ $customEmoji[asker]Koruma: Sokaktaki kötü hırsızlardan korumak için alabilirsin belki : Fiyatı: \`10000\` (24 Saatliktir) | Kod: **10**
+ <:mhalat:862023703676321822>Halat: Kahramanların işine yarayabilir : Fiyatı: \`50\` | Kod: **11**
   }{footer:Sayfa 1/3 | Satın Almak İçin msatınal <item kodu>:$authorAvatar}]
 `})
 bot.awaitedCommand({
