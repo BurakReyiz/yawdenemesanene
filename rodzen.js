@@ -265,7 +265,7 @@ bot.command({
   aliases:["shop"],
   code:`
   $reactionCollector[$splitText[1];$authorID;2m;1️⃣,2️⃣,3️⃣;one,two,three;yes]
-  $textSplit[$sendMessage[{author:Mustik - Market:$authorAvatar}
+  $textSplit[$sendMessage[{author:Mixden - Market:$authorAvatar}
   {color:GREEN}
   {image:https://cdn.discordapp.com/attachments/858277684185661501/858938697452748820/duke.gif}
   {description:DUKE : Ne Almak İstersiniz};yes]`  
@@ -372,7 +372,7 @@ bot.awaitedCommand({
   *Yaşın:* **$replaceText[$getGlobalUserVar[yaş;$mentioned[1;yes]];yok;Belirtilmemiş]**
   *Cinsiyet:* **$replaceText[$replaceText[$replaceText[$getGlobalUserVar[cinsiyet;$mentioned[1;yes]];yok;Belirtilmemiş];erkek;Erkek :man:];kadın;Kadın :woman:]**
   
-  *Aranma:* $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[aranma;$mentioned[1;yes]];yok;<:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341>];biraz;<:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];orta;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915><:mbosyildiz:860458237127163915>];çok;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mbosyildiz:860458237127163915>];fazla;<:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460><:mdoluyildiz:860458305604157460>]
+  *Aranma:* $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[aranma;$mentioned[1;yes]];yok;];biraz;<:Doluyildiz:878899053943996426><:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341>];orta;<:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426><:Bosyildiz:878895639038136341><:Bosyildiz:878895639038136341>];çok;<:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426><:Bosyildiz:878895639038136341>];fazla;<:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426><:Doluyildiz:878899053943996426>]
     $replaceText[$replaceText[$checkCondition[$getGlobalUserVar[birlik;$mentioned[1;yes]]==yok];true;];false;*Birliğin:* **$getGlobalUserVar[birlik;$mentioned[1;yes]]**]
   *Seviye Bilgi:* **$getGlobalUserVar[seviye;$mentioned[1;yes]] |  $getGlobalUserVar[spuan;$mentioned[1;yes]]/$getGlobalUserVar[skpuan;$mentioned[1;yes]]** 
   *Paran:* **$truncate[$getGlobalUserVar[coin;$mentioned[1;yes]]]** | *Bankadaki Paran:* **$truncate[$getGlobalUserVar[bcoin;$mentioned[1;yes]]]/$getGlobalUserVar[bsınır;$mentioned[1;yes]]**
